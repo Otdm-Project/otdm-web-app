@@ -1482,7 +1482,6 @@ __metadata:
     "@astrojs/tailwind": "npm:^5.1.0"
     astro: "npm:^4.11.5"
     astro-icon: "npm:^1.1.0"
-    tailwind-variants: "npm:^0.2.1"
     tailwindcss: "npm:^3.4.4"
     typescript: "npm:^5.5.3"
   languageName: unknown
@@ -5361,24 +5360,6 @@ __metadata:
   bin:
     svgo: ./bin/svgo
   checksum: 10c0/cf107e9fa29914504aa65f5f514e16b73aa76adb1c67c84312d3f2402f4bf00b8b6b0d62e3cce247cf16017c24b8191eb003c2f99f8e10844ad8803acb9d806c
-  languageName: node
-  linkType: hard
-
-"tailwind-merge@npm:^2.2.0":
-  version: 2.4.0
-  resolution: "tailwind-merge@npm:2.4.0"
-  checksum: 10c0/77bd20647d08db78a0bdf7b57d4b904479aee7727f44570f8834d62a1aa56f42d7ae68ac959e3d610c9f188aa164eeefb6c43df4f0c8bb7cfc3418e1575bfecb
-  languageName: node
-  linkType: hard
-
-"tailwind-variants@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "tailwind-variants@npm:0.2.1"
-  dependencies:
-    tailwind-merge: "npm:^2.2.0"
-  peerDependencies:
-    tailwindcss: "*"
-  checksum: 10c0/3fb392f25ed68c19b5bb701b00c62269b09d0e55658364211a479331316aac0825134f8708e7f7e33831ae29a4315d2bab16f9447cf2881b69739d4063993d5a
   languageName: node
   linkType: hard
 
