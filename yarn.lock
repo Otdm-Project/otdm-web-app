@@ -668,15 +668,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify-json/carbon@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@iconify-json/carbon@npm:1.2.1"
-  dependencies:
-    "@iconify/types": "npm:*"
-  checksum: 10c0/16ede07481ad6c2bbc635c7994aaf1a9fbbd04089df45b2f628e6bf3d330ef0fe431c8b3ae439a47078c39050ebafe51e7c32197d2fd5a62144be7a9d2e57882
-  languageName: node
-  linkType: hard
-
 "@iconify/tools@npm:^4.0.5":
   version: 4.0.6
   resolution: "@iconify/tools@npm:4.0.6"
@@ -696,7 +687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/types@npm:*, @iconify/types@npm:^2.0.0":
+"@iconify/types@npm:^2.0.0":
   version: 2.0.0
   resolution: "@iconify/types@npm:2.0.0"
   checksum: 10c0/65a3be43500c7ccacf360e136d00e1717f050b7b91da644e94370256ac66f582d59212bdb30d00788aab4fc078262e91c95b805d1808d654b72f6d2072a7e4b2
@@ -1481,7 +1472,6 @@ __metadata:
   dependencies:
     "@astrojs/check": "npm:^0.8.1"
     "@astrojs/tailwind": "npm:^5.1.0"
-    "@iconify-json/carbon": "npm:^1.2.1"
     astro: "npm:^4.11.5"
     astro-icon: "npm:^1.1.1"
     tailwind-variants: "npm:^0.2.1"
