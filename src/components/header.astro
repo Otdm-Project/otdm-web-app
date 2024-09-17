@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import { otdmButton } from "./style";
 
 ---
@@ -9,12 +10,12 @@ import { otdmButton } from "./style";
     <div class="grow"></div>
     <div class="flex items-center">
         <button class={otdmButton({color: "docs"})}>
-        button
+            <Icon name="docs" />
         </button>
     </div>
     <div class="flex items-center">
         <button class={otdmButton({color: "download"})}>
-        button
+            <Icon name="download" />
         </button>
     </div>
     <div class="flex items-center">
