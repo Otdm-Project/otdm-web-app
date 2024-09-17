@@ -1,9 +1,30 @@
+---
+import { otdmButton } from "./style";
+
+---
 <div class="flex justify-center h-20 bg-cyan-500">
     <div class="flex items-center h-16 p-2">
         <a class="text-zinc-50 text-2xl" href="">おてだま</a>
     </div>
     <div class="grow"></div>
-    <div><div class="p-2"></div></div>
-    <div><div class="p-2"></div></div>
-    <div><div class="p-2"></div></div>
+    <div class="flex items-center">
+        <button class={otdmButton({color: "docs"})}>
+        button
+        </button>
+    </div>
+    <div class="flex items-center">
+        <button class={otdmButton({color: "download"})}>
+        button
+        </button>
+    </div>
+    <div class="flex items-center">
+        <button class={otdmButton({color: "git"})}>
+        button
+        </button>
+    </div>
+    <div class="flex items-center">
+        <button class={otdmButton({color: "modeChange"})}>
+        button
+        </button>
+    </div>
 </div>
