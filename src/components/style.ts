@@ -1,13 +1,14 @@
 import { tv } from 'tailwind-variants';
 
 export const otdmButton = tv({
-    base: 'font-semibold rounded-full text-white',
+    base: 'flex justify-center items-center size-12 rounded-lg',
     variants: {
         color:{
-            docs: 'bg-orange-500',
-            download: 'bg-yellow-500',
-            git: 'bg-sky-500',
-            modeChange: 'bg-indigo-500',
+            docs: 'text-orange-900 bg-orange-400',
+            download: 'text-yellow-900 bg-yellow-300',
+            git: 'text-black bg-sky-100',
+            darkMode: 'text-yellow-100 bg-sky-900',
+            lightMode: 'text-orange-300 bg-sky-100',
         }
     }
 })
