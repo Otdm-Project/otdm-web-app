@@ -3,9 +3,9 @@ declare module 'astro-icon/components' {
     interface Props extends HTMLAttributes<"svg"> {
         name: string;
         title?: string;
-        size?: number;
-        width?: number;
-        height?: number;
+        size?: number | string;
+        width?: number | string;
+        height?: number | string;
     }
     export const Icon: (props: IconProps) => JSX.Element;
 }
