@@ -3,10 +3,10 @@ import { Icon } from "astro-icon/components";
 import { otdmButton } from "./style";
 
 ---
-<div class="bg-cyan-500">
+<header class="absolute inset-x-0 top-0 bg-cyan-500">
     <div class="flex items-center space-x-2 px-2 py-4">
         <div>
-            <a class="text-zinc-50 text-xl text-nowrap" href="">おてだま</a>
+            <a class="text-zinc-50 text-2xl text-nowrap" href="">おてだま</a>
         </div>
         <div class="grow"></div>
         <button class={otdmButton({color: "docs"})}>
@@ -22,4 +22,4 @@ import { otdmButton } from "./style";
             <Icon name="moon" size="36" />
         </button>
     </div>
-</div>
+</header>
