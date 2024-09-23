@@ -3,23 +3,25 @@ import { Icon } from "astro-icon/components";
 import { otdmButton } from "./style";
 
 ---
-<header class="absolute inset-x-0 top-0 bg-cyan-500">
-    <div class="flex items-center space-x-2 px-2 py-4">
+<header class="bg-cyan-500">
+    <div class="flex items-center px-2 py-4">
         <div>
-            <a class="text-zinc-50 text-2xl text-nowrap" href="">おてだま</a>
+            <a class="text-zinc-50 text-2xl text-nowrap" href="/">おてだま</a>
         </div>
         <div class="grow"></div>
-        <button class={otdmButton({color: "docs"})}>
-            <Icon name="docs" size="36" />
-        </button>
-        <button class={otdmButton({color: "download"})}>
-            <Icon name="download" size="36" />
-        </button>
-        <button class={otdmButton({color: "git"})}>
-            <Icon name="github" size="36" />
-        </button>
-        <button class={otdmButton({color: "darkMode"})}>
-            <Icon name="moon" size="36" />
-        </button>
+        <nav class="flex space-x-2">
+            <button class={otdmButton({color: "docs"})}>
+                <Icon name="docs" size="36" />
+            </button>
+            <button class={otdmButton({color: "download"})}>
+                <Icon name="download" size="36" />
+            </button>
+            <button class={otdmButton({color: "git"})}>
+                <Icon name="github" size="36" />
+            </button>
+            <button class={otdmButton({color: "darkMode"})}>
+                <Icon name="moon" size="36" />
+            </button>
+        </nav>
     </div>
 </header>
