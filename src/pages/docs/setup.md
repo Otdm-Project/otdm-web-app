@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/docs.astro
+layout: "@/layouts/docs.astro"
 title: セットアップについて
 author: Haru-0001
 description: セットアップの説明
