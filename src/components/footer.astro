@@ -1,47 +1,10 @@
 ---
-const contributors = [
-  {
-    name: 'ODENKITUNE',
-    github: 'https://github.com/ODENKITUNE',
-    avatar: 'https://avatars.githubusercontent.com/u/88931859',
-    ZIndex: 'z-40',
-  },
-  {
-    name: 'Yayuki Kazuha',
-    github: 'https://github.com/Yayuki-Kazuha',
-    avatar: 'https://avatars.githubusercontent.com/u/108244620',
-    ZIndex: 'z-30',
-  },
-  {
-    name: 'Haru',
-    github: 'https://github.com/Haru-0001',
-    avatar: 'https://avatars.githubusercontent.com/u/166319111',
-    ZIndex: 'z-20',
-  },
-  {
-    name: 'run',
-    github: 'https://github.com/RUN52114',
-    avatar: 'https://avatars.githubusercontent.com/u/168060328',
-    ZIndex: 'z-10',
-  },
-  {
-    name: 'maritos',
-    github: 'https://github.com/maritos-net',
-    avatar: 'https://avatars.githubusercontent.com/u/168062362',
-    ZIndex: 'z-0',
-  }
-]
+import ContributorCard from '@/components/utils/ContributorCard.astro';
 ---
-<footer class="flex flex-col items-center gap-4 p-6 bg-cyan-500 text-zinc-50">
+<footer class="flex flex-col items-center gap-4 overflow-hidden p-6 bg-cyan-500 text-zinc-50">
   <a class="hover:underline" href="/teams/">利用規約</a>
   <a class="hover:underline" href="/privacy/">プライバシーポリシー</a>
   <a class="hover:underline" href="/contributors/">Contributors</a>
-  <div class="flex items-center -space-x-2 h-14">
-    {contributors.map(contributor => (
-    <a href={contributor.github} class={`hover:scale-110 ease-out duration-300 ${contributor.ZIndex} hover:z-50`}>
-      <img class="size-12 rounded-full" src={contributor.avatar} alt={contributor.name} />
-    </a>
-    ))}
-  </div>
+  <ContributorCard />
   <p>© 2024 Otdm Project</p>
 </footer>

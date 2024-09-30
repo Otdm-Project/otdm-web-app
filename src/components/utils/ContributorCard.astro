@@ -1,0 +1,10 @@
+---
+import { contributors } from '@/data/contributors-data';
+---
+<div class="relative flex items-center -space-x-2 h-14 overflow-hidden">
+  {contributors.map((contributor, index) => (
+  <a href={contributor.github} class={`hover:scale-110 ease-out duration-300 z-${40-index*10} hover:z-50`}>
+    <img class="size-12 rounded-full" src={contributor.avatar} alt={contributor.name} />
+  </a>
+  ))}
+</div>
