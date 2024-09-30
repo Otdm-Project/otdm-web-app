@@ -3,27 +3,32 @@ const contributors = [
   {
     name: 'ODENKITUNE',
     github: 'https://github.com/ODENKITUNE',
-    avatar: 'https://avatars.githubusercontent.com/u/88931859'
+    avatar: 'https://avatars.githubusercontent.com/u/88931859',
+    ZIndex: 'z-40',
   },
   {
     name: 'Yayuki Kazuha',
     github: 'https://github.com/Yayuki-Kazuha',
-    avatar: 'https://avatars.githubusercontent.com/u/108244620'
+    avatar: 'https://avatars.githubusercontent.com/u/108244620',
+    ZIndex: 'z-30',
   },
   {
     name: 'Haru',
     github: 'https://github.com/Haru-0001',
-    avatar: 'https://avatars.githubusercontent.com/u/166319111'
+    avatar: 'https://avatars.githubusercontent.com/u/166319111',
+    ZIndex: 'z-20',
   },
   {
     name: 'run',
     github: 'https://github.com/RUN52114',
-    avatar: 'https://avatars.githubusercontent.com/u/168060328'
+    avatar: 'https://avatars.githubusercontent.com/u/168060328',
+    ZIndex: 'z-10',
   },
   {
     name: 'maritos',
     github: 'https://github.com/maritos-net',
-    avatar: 'https://avatars.githubusercontent.com/u/168062362'
+    avatar: 'https://avatars.githubusercontent.com/u/168062362',
+    ZIndex: 'z-0',
   }
 ]
 ---
@@ -31,9 +36,9 @@ const contributors = [
   <a class="hover:underline" href="/teams/">利用規約</a>
   <a class="hover:underline" href="/privacy/">プライバシーポリシー</a>
   <a class="hover:underline" href="/contributors/">Contributors</a>
-  <div class="flex items-center gap-1 h-14">
+  <div class="flex items-center -space-x-2 h-14">
     {contributors.map(contributor => (
-    <a href={contributor.github} class="hover:scale-125 ease-out duration-300">
+    <a href={contributor.github} class={`hover:scale-125 ease-out duration-300 ${contributor.ZIndex} hover:z-50`}>
       <img class="size-12 rounded-full" src={contributor.avatar} alt={contributor.name} />
     </a>
     ))}
