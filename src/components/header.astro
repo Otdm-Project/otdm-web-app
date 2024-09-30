@@ -4,24 +4,24 @@ import { otdmButton } from "./style";
 
 ---
 <header class="sticky top-0 w-full h-20 bg-cyan-500">
-    <div class="flex items-center h-full px-6 py-4">
-        <div>
-            <a class="text-zinc-50 text-2xl text-nowrap" href="/">おてだま</a>
-        </div>
-        <div class="grow"></div>
-        <nav class="md:flex hidden gap-3 text-4xl">
-            <a class={otdmButton({color: "docs"})} href="/docs/" >
-                <Icon name="docs"/>
-            </a>
-            <a class={otdmButton({color: "download"})} href="/download/">
-                <Icon name="download"/>
-            </a>
-            <a class={otdmButton({color: "git"})} href="https://github.com/Otdm-Project">
-                <Icon name="github"/>
-            </a>
-            <button class={otdmButton({color: "darkMode"})}>
-                <Icon name="moon"/>
-            </button>
-        </nav>
+  <div class="flex items-center h-full px-6 py-4">
+    <div>
+      <a class="text-zinc-50 text-2xl text-nowrap" href="/">おてだま</a>
     </div>
+    <div class="grow"></div>
+    <nav class="md:flex hidden gap-3 text-4xl">
+      <a class={otdmButton({color: "docs"})} href="/docs/" >
+        <Icon name="docs"/>
+      </a>
+      <a class={otdmButton({color: "download"})} href="/download/">
+        <Icon name="download"/>
+      </a>
+      <a class={otdmButton({color: "git"})} href="https://github.com/Otdm-Project">
+        <Icon name="github"/>
+      </a>
+      <button class={otdmButton({color: "darkMode"})}>
+        <Icon name="moon"/>
+      </button>
+    </nav>
+  </div>
 </header>
