@@ -1,8 +1,8 @@
 ---
 layout: "@/layouts/docs.astro"
-title: "おてだまとは"
+title: "ドキュメント | おてだま"
+header: "おてだまとは"
 author: "@ODENKITUNE"
-description: "セットアップの説明"
 ---
 
 ## パパっとWEB公開したくない？

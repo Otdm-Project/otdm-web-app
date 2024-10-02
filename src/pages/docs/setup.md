@@ -1,8 +1,8 @@
 ---
 layout: "@/layouts/docs.astro"
-title: "セットアップについて"
+title: "セットアップ | おてだま"
+header: "セットアップ"
 author: "@Haru-0001"
-description: "セットアップの説明"
 ---
 
 セットアップの内容

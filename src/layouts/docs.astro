@@ -1,12 +1,19 @@
 ---
 import Layout from "./layout.astro";
 
+interface Props {
+  frontmatter: {
+    title: string;
+    header: string;
+    author: string;
+  };
+}
+
 const {frontmatter} = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <h1 class="text-4xl">{frontmatter.title}</h1>
+  <h1 class="text-4xl">{frontmatter.header}</h1>
   <h2>著者:{frontmatter.author}</h2>
-  <p>{frontmatter.description}</p>
   <slot />
 </Layout>
