@@ -13,7 +13,11 @@ const {frontmatter} = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <h1 class="text-4xl">{frontmatter.header}</h1>
-  <h2>著者:{frontmatter.author}</h2>
-  <slot />
+  <div class="p-12">
+    <div class="bg-slate-50 border-2 border-[#FFE4B5]">
+      <h1 class="text-4xl">{frontmatter.header}</h1>
+      <h2>著者:{frontmatter.author}</h2>
+      <slot />
+    </div>
+  </div>
 </Layout>
