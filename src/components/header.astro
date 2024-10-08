@@ -1,7 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import { otdmButton } from "./style";
-
 ---
 <header class="sticky top-0 w-full h-20 bg-cyan-500">
   <div class="flex items-center h-full px-6 py-4">
@@ -10,17 +8,17 @@ import { otdmButton } from "./style";
     </div>
     <div class="grow"></div>
     <nav class="md:flex hidden gap-3 text-4xl">
-      <a class={otdmButton({color: "docs"})} href="/docs/" >
-        <Icon name="docs"/>
+      <a class="btn-base btn-docs" href = "/docs" >
+        <Icon name = docs />
       </a>
-      <a class={otdmButton({color: "download"})} href="/download/">
-        <Icon name="download"/>
+      <a class="btn-base btn-download" href = "/download" >
+        <Icon name = download />
       </a>
-      <a class={otdmButton({color: "git"})} href="https://github.com/Otdm-Project">
-        <Icon name="github"/>
+      <a class="btn-base btn-github" href = "/github" >
+        <Icon name = github />
       </a>
-      <button class={otdmButton({color: "darkMode"})}>
-        <Icon name="moon"/>
+      <button class="btn-base btn-moon" >
+        <Icon name = moon />
       </button>
     </nav>
   </div>

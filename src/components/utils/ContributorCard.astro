@@ -2,7 +2,7 @@
 import { contributors } from '@/data/contributors-data';
 ---
 <div class="flex items-center gap-1 h-14">
-  {contributors.map((contributor, index) => (
+  {contributors.map(contributor => (
   <a href={contributor.github} class={`hover:scale-110 ease-out duration-300`}>
     <img class="size-12 rounded-full" src={contributor.avatar} alt={contributor.name} />
   </a>
