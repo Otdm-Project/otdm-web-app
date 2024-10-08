@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
-    "astro"
+    "astro",
+    "unocss"
   ],
   "search.exclude": {
     "**/.yarn": true,
