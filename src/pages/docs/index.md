@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/docs.astro"
+layout: "@/layouts/docsLayout.astro"
 title: "ドキュメント | おてだま"
 header: "おてだまとは"
 author: "@ODENKITUNE"
@@ -9,7 +9,7 @@ author: "@ODENKITUNE"
 
 ### 世の中のWEBエンジニアの手間を減らそう
 
-これが私たちの理念です。
+#### これが私たちの理念です。
 
 ## 😵‍💫 WEB公開って意外と面倒、、、
 

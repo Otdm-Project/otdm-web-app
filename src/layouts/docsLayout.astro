@@ -1,0 +1,29 @@
+---
+import Layout from "./layout.astro";
+
+interface Props {
+  frontmatter: {
+    title: string;
+    header: string;
+    author: string;
+  };
+}
+
+const {frontmatter} = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <div class="flex gap-4 justify-center p-12">
+    <div class="lg:flex hidden docs-box min-w-64">
+    </div>
+    <div class="flex flex-col gap-2 docs-box max-w-4xl p-8">
+      <div class="flex justify-between items-end pb-2 border-b">
+        <h1 class="text-4xl">{frontmatter.header}</h1>
+        <h2>著者:{frontmatter.author}</h2>
+      </div>
+      <div class="markdown">
+        <slot />
+      </div>
+    </div>
+  </div>
+</Layout>
