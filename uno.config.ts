@@ -1,7 +1,21 @@
-import { defineConfig,presetUno } from 'unocss'
+import { defineConfig,presetUno,presetTypography } from 'unocss'
 
 export default defineConfig({
-  presets: [presetUno()],
+  presets: [
+    presetUno(),
+    presetTypography({
+      selectorName: "markdown",
+      cssExtend: {
+        "*":{"color": "#333333"},
+        "h1":{ "font-size": "2rem" },
+        "h2":{ "font-size": "1.5rem"},
+        "h3":{ "font-size": "1.25rem" },
+        "h4":{ "font-size": "1rem" },
+        "h5":{ "font-size": "0.875rem" },
+        "h6":{ "font-size": "0.75rem" },
+      }
+    })
+  ],
   rules: [
     ["bg-c-base", { "background-color": "#FFFCF6" }],
     ["bg-c-docs", { "background-color": "#F7F7F7" }],
