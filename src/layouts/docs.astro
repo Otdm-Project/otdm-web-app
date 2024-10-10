@@ -13,8 +13,10 @@ const {frontmatter} = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <div class="p-12">
-    <div class="bg-docs border-docs border-2">
+  <div class="flex gap-4 justify-center p-12">
+    <div class="md:flex hidden docs-box min-w-48">
+    </div>
+    <div class="docs-box max-w-4xl">
       <h1 class="text-4xl">{frontmatter.header}</h1>
       <h2>著者:{frontmatter.author}</h2>
       <slot />

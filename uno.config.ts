@@ -15,6 +15,9 @@ export default defineConfig({
       'btn-github': 'text-black bg-slate-100 hover:bg-slate-300',
       'btn-moon': 'text-yellow-100 bg-sky-900 hover:bg-sky-950',
       'btn-sun': 'text-orange-300 bg-sky-100 hover:bg-sky-300',
+    },
+    {
+      'docs-box': 'bg-c-docs border-c-docs border-2',
     }
   ]
 })
