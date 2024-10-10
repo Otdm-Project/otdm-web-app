@@ -3,9 +3,9 @@ import { defineConfig,presetUno } from 'unocss'
 export default defineConfig({
   presets: [presetUno()],
   rules: [
-    ["bg-base", { "background-color": "#FFFCF6" }],
-    ["bg-docs", { "background-color": "#F7F7F7" }],
-    ["border-docs", { "border-color": "#FFE4B5" }],
+    ["bg-c-base", { "background-color": "#FFFCF6" }],
+    ["bg-c-docs", { "background-color": "#F7F7F7" }],
+    ["border-c-docs", { "border-color": "#FFE4B5" }],
   ],
   shortcuts: [
     {
