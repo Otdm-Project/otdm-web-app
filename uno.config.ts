@@ -31,7 +31,7 @@ export default defineConfig({
     },
     {
       'font-main': 'text-zinc-700 font-medium',
-      'font-main-link': 'text-blue-500 hover:underline decoration-2',
+      'font-main-link': 'text-sky-500 hover:underline decoration-2',
       'box-main': 'bg-c-docs border-c-docs border-2',
     }
   ]
