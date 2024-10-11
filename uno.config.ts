@@ -6,7 +6,6 @@ export default defineConfig({
     presetTypography({
       selectorName: "markdown",
       cssExtend: {
-        "*":{"color": "#333333"},
         "h1":{ "font-size": "2rem" },
         "h2":{ "font-size": "1.5rem"},
         "h3":{ "font-size": "1.25rem" },
@@ -31,7 +30,9 @@ export default defineConfig({
       'btn-sun': 'text-orange-300 bg-sky-100 hover:bg-sky-300',
     },
     {
-      'docs-box': 'bg-c-docs border-c-docs border-2',
+      'font-main': 'text-zinc-700 font-medium',
+      'font-main-link': 'text-blue-500 hover:underline decoration-2',
+      'box-main': 'bg-c-docs border-c-docs border-2',
     }
   ]
 })
