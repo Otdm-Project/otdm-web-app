@@ -1,4 +1,5 @@
 ---
+import DocsBox from "@/components/utils/DocsBox.astro";
 import Layout from "./layout.astro";
 
 interface Props {
@@ -14,19 +15,11 @@ const {frontmatter} = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <main class="flex-1 bg-c-base font-main">
-    <div class="flex gap-4 justify-center p-12">
-      <div class="lg:flex hidden box-main min-w-64">
-      </div>
-      <div class="flex flex-col gap-2 box-main max-w-4xl p-8">
-        <div class="flex justify-between items-end pb-2 border-b">
-          <h1 class="text-4xl">{frontmatter.header}</h1>
-          <h2>著者:<a class="font-main-link" href={frontmatter.authorLink}>{frontmatter.author}</a></h2>
-        </div>
-        <div class="markdown">
-          <slot />
-        </div>
-      </div>
+  <div class="flex gap-4 justify-center p-12">
+    <div class="lg:flex hidden box-main min-w-64">
     </div>
-  </main>
+    <DocsBox header={frontmatter.header} author={frontmatter.author} authorLink={frontmatter.authorLink}>
+      <slot />
+    </DocsBox>
+  </div>
 </Layout>
