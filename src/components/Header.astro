@@ -8,16 +8,20 @@ import { Icon } from "astro-icon/components";
     </div>
     <div class="grow"></div>
     <nav class="sm:flex hidden gap-3 text-4xl">
-      <a class="btn-base btn-docs" href = "/docs" >
+      <a class="relative group btn-base btn-docs" href = "/docs" >
+        <span class="tooltip">ドキュメント</span>
         <Icon name = docs />
       </a>
-      <a class="btn-base btn-download" href = "/download" >
+      <a class="relative group btn-base btn-download" href = "/download" >
+        <span class="tooltip">ダウンロード</span>
         <Icon name = download />
       </a>
-      <a class="btn-base btn-github" href = "https://github.com/Otdm-Project" >
+      <a class="relative group btn-base btn-github" href = "https://github.com/Otdm-Project" >
+        <span class="tooltip">github</span>
         <Icon name = github />
       </a>
-      <button class="btn-base btn-moon" >
+      <button class="relative group btn-base btn-moon" >
+        <span class="tooltip">テーマ切り替え</span>
         <Icon name = moon />
       </button>
     </nav>

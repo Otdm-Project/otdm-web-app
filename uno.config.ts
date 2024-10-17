@@ -19,6 +19,7 @@ export default defineConfig({
     ["bg-c-base", { "background-color": "#FFFCF6" }],
     ["bg-c-docs", { "background-color": "#F7F7F7" }],
     ["border-c-docs", { "border-color": "#FFE4B5" }],
+    ["inset-tooltip", { "bottom": "-75%", "left": "50%", "transform": "translateX(-50%)" }],
   ],
   shortcuts: [
     {
@@ -34,6 +35,8 @@ export default defineConfig({
       'btn-moon': 'text-yellow-100 bg-sky-900 hover:bg-sky-950',
       'btn-sun': 'text-orange-300 bg-sky-100 hover:bg-sky-300',
     },
-
+    {
+      'tooltip': 'inline-block absolute inset-tooltip text-nowrap text-xs bg-zinc-800 text-zinc-50 p-2 rounded-md opacity-0 group-hover:opacity-100 transition pointer-events-none',
+    }
   ]
 })
