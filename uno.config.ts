@@ -1,4 +1,4 @@
-import { defineConfig,presetUno,presetTypography } from 'unocss'
+import { defineConfig,presetUno,presetTypography,transformerVariantGroup } from 'unocss'
 
 export default defineConfig({
   presets: [
@@ -14,6 +14,9 @@ export default defineConfig({
         "h6":{ "font-size": "0.75rem" },
       }
     })
+  ],
+  transformers: [
+    transformerVariantGroup(),
   ],
   rules: [
     ["bg-c-base", { "background-color": "#FFFCF6" }],
