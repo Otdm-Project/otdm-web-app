@@ -22,6 +22,11 @@ export default defineConfig({
   ],
   shortcuts: [
     {
+      'font-main': 'text-zinc-700',
+      'font-main-link': 'text-sky-500 hover:underline decoration-2',
+      'box-main': 'bg-c-docs border-c-docs border-2',
+    },
+    {
       'btn-base': 'flex justify-center items-center size-12 rounded-lg',
       'btn-docs': 'text-orange-900 bg-orange-400 hover:bg-orange-500',
       'btn-download': 'text-yellow-900 bg-yellow-300 hover:bg-yellow-400',
@@ -29,10 +34,6 @@ export default defineConfig({
       'btn-moon': 'text-yellow-100 bg-sky-900 hover:bg-sky-950',
       'btn-sun': 'text-orange-300 bg-sky-100 hover:bg-sky-300',
     },
-    {
-      'font-main': 'text-zinc-700',
-      'font-main-link': 'text-sky-500 hover:underline decoration-2',
-      'box-main': 'bg-c-docs border-c-docs border-2',
-    }
+
   ]
 })
