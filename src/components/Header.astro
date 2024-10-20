@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import Tooltip  from "./utils/Tooltip.astro";
 ---
 <header class="sticky top-0 w-full h-20 bg-cyan-500">
   <div class="flex items-center h-full px-6 py-4">
@@ -8,22 +9,26 @@ import { Icon } from "astro-icon/components";
     </div>
     <div class="grow"></div>
     <nav class="sm:flex hidden gap-3 text-4xl">
-      <a class="relative group btn-base btn-docs" href = "/docs" >
-        <span class="tooltip">ドキュメント</span>
-        <Icon name = docs />
-      </a>
-      <a class="relative group btn-base btn-download" href = "/download" >
-        <span class="tooltip">ダウンロード</span>
-        <Icon name = download />
-      </a>
-      <a class="relative group btn-base btn-github" href = "https://github.com/Otdm-Project" >
-        <span class="tooltip">github</span>
-        <Icon name = github />
-      </a>
-      <button class="relative group btn-base btn-moon" >
-        <span class="tooltip">テーマ切り替え</span>
-        <Icon name = moon />
-      </button>
+      <Tooltip name = ドキュメント>
+        <a class="btn-base btn-docs" href = "/docs" >
+          <Icon name = docs />
+        </a>
+      </Tooltip>
+      <Tooltip name = ダウンロード>
+        <a class="btn-base btn-download" href = "/download" >
+          <Icon name = download />
+        </a>
+      </Tooltip>
+      <Tooltip name = GitHub>
+        <a class="btn-base btn-github" href = "https://github.com/Otdm-Project" >
+          <Icon name = github />
+        </a>
+      </Tooltip>
+      <Tooltip name = テーマ切り替え>
+        <button class=" btn-base btn-moon" >
+          <Icon name = moon />
+        </button>
+      </Tooltip>
     </nav>
   </div>
 </header>
