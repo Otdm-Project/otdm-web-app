@@ -1,6 +1,7 @@
 ---
 import DocsBox from "@/components/DocsBox.astro";
 import Layout from "./layout.astro";
+import Navigation from "@/components/Navigation.astro";
 
 interface Props {
   frontmatter: {
@@ -16,8 +17,7 @@ const {frontmatter} = Astro.props;
 
 <Layout title={frontmatter.title}>
   <div class="flex gap-4 justify-center p-12">
-    <div class="lg:flex hidden box-main min-w-64">
-    </div>
+    <Navigation />
     <DocsBox header={frontmatter.header} author={frontmatter.author} authorLink={frontmatter.authorLink}>
       <slot />
     </DocsBox>
