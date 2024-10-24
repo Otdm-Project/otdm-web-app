@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
 import Tooltip  from "./utils/Tooltip.astro";
 ---
 <header class="sticky z-100 top-0 w-full h-20 bg-cyan-500">
@@ -11,22 +10,22 @@ import Tooltip  from "./utils/Tooltip.astro";
     <nav class="sm:flex hidden gap-3 text-4xl">
       <Tooltip name = ドキュメント>
         <a class="btn-base btn-docs" href = "/docs" >
-          <Icon name = docs />
+          <div class="i-tabler:clipboard-text w-1em h-1em"></div>
         </a>
       </Tooltip>
       <Tooltip name = ダウンロード>
         <a class="btn-base btn-download" href = "/download" >
-          <Icon name = download />
+          <div class="i-tabler:download w-1em h-1em"></div>
         </a>
       </Tooltip>
       <Tooltip name = GitHub>
         <a class="btn-base btn-github" href = "https://github.com/Otdm-Project" >
-          <Icon name = github />
+          <div class="i-custom:github w-1em h-1em"></div>
         </a>
       </Tooltip>
       <Tooltip name = テーマ切り替え>
         <button class=" btn-base btn-moon" >
-          <Icon name = moon />
+          <div class="i-tabler:moon w-1em h-1em"></div>
         </button>
       </Tooltip>
     </nav>

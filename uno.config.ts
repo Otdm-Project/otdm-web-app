@@ -1,8 +1,27 @@
-import { defineConfig,presetUno,presetTypography,transformerVariantGroup } from 'unocss'
+import {
+  defineConfig,
+  presetUno,
+  presetTypography,
+  transformerVariantGroup
+} from 'unocss'
+import { presetIcons } from 'unocss/preset-icons'
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 
 export default defineConfig({
   presets: [
     presetUno(),
+    presetIcons({
+      collections:{
+        'custom': FileSystemIconLoader(
+          './public/icons',
+          svg => svg.replace(/#000/, 'currentColor')
+      ),
+      extraProperties: {
+        'display': 'inline-block',
+        'vertical-align': 'middle',
+        }
+      }
+    }),
     presetTypography({
       selectorName: "markdown",
       cssExtend: {
