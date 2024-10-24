@@ -1,9 +1,10 @@
 ---
-const posts = await Astro.glob('@/pages/docs/*.md');
+const docs = await Astro.glob('@/pages/docs/*.md');
+console.log(docs);
 ---
 
 <div class="sticky z-80 top-30 lg:(flex flex-col) hidden h-80vh box-main min-w-64">
-  {posts.map((docs) => (
+  {docs.map((docs) => (
     <article>
       <a href={docs.url}>{docs.frontmatter.header}</a>
     </article>
