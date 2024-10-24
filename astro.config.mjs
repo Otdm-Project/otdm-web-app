@@ -7,5 +7,8 @@ export default defineConfig({
     UnoCSS({
       injectReset: true
     })
-  ]
+  ],
+  image: {
+    domains: ["github.com"],
+  }
 });

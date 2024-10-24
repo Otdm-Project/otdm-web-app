@@ -1,10 +1,11 @@
 ---
 import { contributors } from '@/data/contributors';
+import { Image } from 'astro:assets';
 ---
 <div class="flex items-center gap-1 h-14">
   {contributors.map(contributor => (
-  <a href={contributor.github} class={`hover:scale-110 ease-out duration-300`}>
-    <img class="size-12 rounded-full" src={contributor.avatar} alt={contributor.name} />
+  <a href={contributor.github}>
+    <Image class="rounded-full hover:scale-125 ease-out duration-300" src={contributor.avatar} alt={contributor.name} width="48" height="48" />
   </a>
   ))}
 </div>
