@@ -19,10 +19,10 @@ docs.sort((a, b) => {
 });
 ---
 
-<div class="lg:(flex flex-col) hidden box-main min-w-64">
-  <div class="sticky top-20 flex flex-col gap-2 px-4 py-8">
-    <div class="h-8 border-2 border-c-docs">
-    </div>
+<div class="lg:(flex flex-col) hidden min-w-64 border-r-2 border-docs-secondary ">
+  <div class="sticky top-20 flex flex-col gap-2 p-8">
+    <input class="h-8 border-2 bg-docs-primary border-docs-secondary">
+    </input>
     {docs.map((doc) => (
       <article>
         <a href={doc.url}>{doc.frontmatter.header}</a>

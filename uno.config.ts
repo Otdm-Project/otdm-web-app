@@ -2,6 +2,7 @@ import {
   defineConfig,
   presetUno,
   presetTypography,
+  transformerDirectives,
   transformerVariantGroup
 } from 'unocss'
 import { presetIcons } from 'unocss/preset-icons'
@@ -35,19 +36,30 @@ export default defineConfig({
     })
   ],
   transformers: [
+    transformerDirectives(),
     transformerVariantGroup(),
   ],
+  theme: {
+    colors:{
+      otdm:{
+        neutral : "#FFFCF6",
+        primary : "theme('colors.cyan.500')",
+        secondary : "theme('colors.cyan.700')",
+      },
+      docs:{
+        primary : "#F7F7F7",
+        secondary : "#FFE4B5",
+      }
+    }
+  },
   rules: [
-    ["bg-c-base", { "background-color": "#FFFCF6" }],
-    ["bg-c-docs", { "background-color": "#F7F7F7" }],
-    ["border-c-docs", { "border-color": "#FFE4B5" }],
     ["inset-tooltip", { "bottom": "-75%", "left": "50%", "transform": "translateX(-50%)" }],
   ],
   shortcuts: [
     {
       'font-main': 'text-zinc-700',
       'font-main-link': 'text-sky-500 hover:underline decoration-2',
-      'box-main': 'bg-c-docs border-c-docs border-2',
+      'box-main': 'bg-docs-primary border-docs-secondary border-2',
     },
     {
       'btn-base': 'flex justify-center items-center size-12 rounded-lg',
