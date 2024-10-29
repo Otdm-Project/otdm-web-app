@@ -45,10 +45,13 @@ export default defineConfig({
         neutral : "#FFFCF6",
         primary : "theme('colors.cyan.500')",
         secondary : "theme('colors.cyan.700')",
+        text : "theme('colors.zinc.50')",
       },
       docs:{
         primary : "#F7F7F7",
         secondary : "#FFE4B5",
+        text : "theme('colors.zinc.700')",
+        link : "theme('colors.sky.500')",
       }
     }
   },
@@ -57,9 +60,8 @@ export default defineConfig({
   ],
   shortcuts: [
     {
-      'font-main': 'text-zinc-700',
-      'font-main-link': 'text-sky-500 hover:underline decoration-2',
       'box-main': 'bg-docs-primary border-docs-secondary border-2',
+      'box-link': 'text-docs-link hover:underline decoration-2',
     },
     {
       'btn-base': 'flex justify-center items-center size-12 rounded-lg',
