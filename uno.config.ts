@@ -64,13 +64,14 @@ export default defineConfig({
       'box-link': 'text-docs-link hover:underline decoration-2',
     },
     {
-      'btn-base': 'flex justify-center items-center size-12 rounded-lg',
+      'btn-base': 'sm:flex hidden justify-center items-center size-12 rounded-lg',
+      'btn-base-menu': 'flex justify-center items-center size-12 rounded-lg',
       'btn-docs': 'text-orange-900 bg-orange-400 hover:bg-orange-500',
       'btn-download': 'text-yellow-900 bg-yellow-300 hover:bg-yellow-400',
-      'btn-github': 'text-white bg-green-500 hover:bg-green-600',
+      'btn-github': 'bg-slate-50 hover:bg-slate-200',
       'btn-moon': 'text-yellow-100 bg-sky-900 hover:bg-sky-950',
       'btn-sun': 'text-orange-300 bg-sky-100 hover:bg-sky-300',
-      'btn-menu': 'text-slate-900 bg-slate-100 hover:bg-slate-300',
+      'btn-menu': 'text-cyan-900 bg-cyan-500 hover:bg-cyan-600 sm:text-green-900 sm:bg-green-500 sm:hover:bg-green-600 ',
     },
   ]
 })
