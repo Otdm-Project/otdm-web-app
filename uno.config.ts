@@ -71,7 +71,7 @@ export default defineConfig({
       'btn-github': 'bg-slate-50 hover:bg-slate-200',
       'btn-moon': 'text-yellow-100 bg-sky-900 hover:bg-sky-950',
       'btn-sun': 'text-orange-300 bg-sky-100 hover:bg-sky-300',
-      'btn-menu': 'text-cyan-900 bg-cyan-500 hover:bg-cyan-600 sm:text-green-900 sm:bg-green-500 sm:hover:bg-green-600 ',
+      'btn-menu': 'text-cyan-900 bg-cyan-500 hover:bg-cyan-600 sm:(text-green-900 bg-green-500 hover:bg-green-600)',
     },
   ]
 })
