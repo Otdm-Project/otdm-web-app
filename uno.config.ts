@@ -55,6 +55,14 @@ export default defineConfig({
       }
     }
   },
+  preflights: [{
+    getCSS: () => `
+      *:focus-visible {
+        outline: 3px solid rgb(8 47 73);
+        border-radius: 2px;
+      }
+    `,
+  }],
   rules: [
     ["inset-tooltip", { "bottom": "-75%", "left": "50%", "transform": "translateX(-50%)" }],
   ],
