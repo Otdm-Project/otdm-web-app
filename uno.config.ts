@@ -42,14 +42,14 @@ export default defineConfig({
   theme: {
     colors:{
       otdm:{
-        neutral : "#FFFCF6",
+        neutral : "rgb(255,252,246)",
         primary : "theme('colors.cyan.500')",
         secondary : "theme('colors.cyan.700')",
         text : "theme('colors.zinc.50')",
       },
       docs:{
-        primary : "#F7F7F7",
-        secondary : "#FFE4B5",
+        primary : "rgb(247,247,247)",
+        secondary : "rgb(255,228,181)",
         text : "theme('colors.zinc.700')",
         link : "theme('colors.sky.500')",
       }
@@ -58,18 +58,19 @@ export default defineConfig({
   preflights: [{
     getCSS: () => `
       *:focus-visible {
-        outline: 3px solid rgb(8 47 73);
+        outline: 3px solid theme('colors.cyan.900');
         border-radius: 2px;
       }
-    `,
+    `
   }],
   rules: [
     ["inset-tooltip", { "bottom": "-75%", "left": "50%", "transform": "translateX(-50%)" }],
+    ["caret-nav", { "caret-color": "theme('colors.sky.600')" }],
   ],
   shortcuts: [
     {
       'box-main': 'bg-docs-primary border-docs-secondary border-2',
-      'box-link': 'text-docs-link hover:underline decoration-2',
+      'box-link': 'text-docs-link hover:underline decoration-2 outline-cyan-600',
     },
     {
       'btn-base': 'sm:flex hidden justify-center items-center size-12 rounded-lg',
