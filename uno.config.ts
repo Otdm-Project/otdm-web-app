@@ -64,12 +64,12 @@ export default defineConfig({
     `
   }],
   rules: [
-    ["inset-tooltip", { "bottom": "-75%", "left": "50%", "transform": "translateX(-50%)" }],
+    ["inset-tooltip", { "bottom": "-85%", "left": "50%", "transform": "translateX(-50%)" }],
     ["caret-nav", { "caret-color": "theme('colors.sky.600')" }],
   ],
   shortcuts: [
     {
-      'box-main': 'bg-docs-primary border-docs-secondary border-2',
+      'box-main': 'bg-docs-primary border-(2 docs-secondary)',
       'box-link': 'text-docs-link hover:underline decoration-2 outline-cyan-600',
     },
     {
