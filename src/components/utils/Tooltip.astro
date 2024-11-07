@@ -4,7 +4,7 @@ const { name } = Astro.props;
 
 <div class="relative group">
   <slot />
-  <span class="inline-block absolute inset-tooltip text-nowrap text-xs bg-zinc-800 text-zinc-50 p-2 rounded-md opacity-0 group-hover:opacity-100 transition pointer-events-none">
+  <span class="inline-block absolute inset-tooltip text-nowrap text-xs bg-zinc-200 text-zinc-800 p-2 rounded-md opacity-0 group-hover:opacity-100 transition pointer-events-none">
     {name}
   </span>
 </div>
