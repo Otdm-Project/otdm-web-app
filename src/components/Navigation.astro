@@ -20,10 +20,12 @@ docs.sort((a, b) => {
 ---
 
 <div class="lg:(flex flex-col) hidden min-w-64 border-(r-2 docs-secondary)">
-  <div class="sticky top-20 flex flex-col gap-2 p-8">
-    <input class="h-8 px-2 bg-docs-primary border-(2 docs-secondary) outline-cyan-600 focus:border-none caret-nav" />
-    {docs.map((doc) => (
-      <a class="p-2 rounded-lg outline-cyan-600 hover:bg-slate-950/5" href={doc.url}>{doc.frontmatter.header}</a>
-    ))}
+  <div class="flex flex-col gap-8 sticky top-20 p-8">
+    <input class="h-8 px-2 bg-docs-primary border-(2 docs-secondary) outline-cyan-600 focus:border-transparent caret-nav" />
+    <div class="flex flex-col gap-2">
+      {docs.map((doc) => (
+        <a class="p-1 rounded-md outline-cyan-600 hover:bg-slate-950/5" href={doc.url}>{doc.frontmatter.header}</a>
+      ))}
+    </div>
   </div>
 </div>
