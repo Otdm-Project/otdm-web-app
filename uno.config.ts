@@ -71,6 +71,7 @@ export default defineConfig({
     {
       'box-main': 'bg-docs-primary border-(2 docs-secondary)',
       'box-link': 'text-docs-link hover:underline decoration-2 outline-cyan-600',
+      'box-tooltip': 'inline-block absolute inset-tooltip bg-docs-primary text-(xs docs-text nowrap) border-(2 docs-secondary) p-2 rounded-md transition pointer-events-none',
     },
     [
     /^btn-(.*?)$/, match => {

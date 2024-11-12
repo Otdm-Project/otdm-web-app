@@ -55,7 +55,7 @@ const props = buttonProps[id];
     <a class={props.style} href={props.href}>
       <div class={props.icon + " size-1em"}></div>
       {props.tooltip && (
-        <span class="inline-block absolute inset-tooltip bg-docs-primary text-(xs docs-text nowrap) border-(2 docs-secondary) p-2 rounded-md opacity-0 group-hover:opacity-100 transition pointer-events-none">
+        <span class="box-tooltip opacity-0 group-hover:opacity-100">
           {props.tooltip}
         </span>
       )}
@@ -64,7 +64,7 @@ const props = buttonProps[id];
     <button class={props.style}>
       <div class={props.icon + " size-1em"}></div>
       {props.tooltip && (
-        <span class="inline-block absolute inset-tooltip bg-docs-primary text-(xs docs-text nowrap) border-(2 docs-secondary) p-2 rounded-md opacity-0 group-hover:opacity-100 transition pointer-events-none">
+        <span class="box-tooltip opacity-0 group-hover:opacity-100">
           {props.tooltip}
         </span>
       )}
