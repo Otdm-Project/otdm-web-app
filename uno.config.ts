@@ -72,15 +72,20 @@ export default defineConfig({
       'box-main': 'bg-docs-primary border-(2 docs-secondary)',
       'box-link': 'text-docs-link hover:underline decoration-2 outline-cyan-600',
     },
-    {
-      'btn-base': 'sm:flex hidden justify-center items-center size-12 rounded-lg',
-      'btn-base-menu': 'flex justify-center items-center size-12 rounded-lg',
-      'btn-docs': 'text-orange-900 bg-orange-400 hover:bg-orange-500',
-      'btn-download': 'text-yellow-900 bg-yellow-300 hover:bg-yellow-400',
-      'btn-github': 'bg-slate-50 hover:bg-slate-200',
-      'btn-moon': 'text-yellow-100 bg-sky-900 hover:bg-sky-950',
-      'btn-sun': 'text-orange-300 bg-sky-100 hover:bg-sky-300',
-      'btn-menu': 'text-cyan-900 bg-cyan-500 hover:bg-cyan-600 sm:(text-green-900 bg-green-500 hover:bg-green-600)',
-    },
+    [
+    /^btn-(.*?)$/, match => {
+      const base = 'flex justify-center items-center size-12 rounded-lg'
+      const styles: { [key: string]: string } = {
+          search: 'text-slate-200 bg-blue-900 hover:bg-blue-950',
+          docs: 'text-orange-900 bg-orange-400 hover:bg-orange-500',
+          download: 'text-yellow-900 bg-yellow-300 hover:bg-yellow-400',
+          github: 'bg-slate-50 hover:bg-slate-200',
+          moon: 'text-yellow-100 bg-sky-900 hover:bg-sky-950',
+          sun: 'text-orange-300 bg-sky-100 hover:bg-sky-300',
+          menu: 'text-cyan-900 bg-cyan-500 hover:bg-cyan-600 sm:(text-green-900 bg-green-500 hover:bg-green-600)',
+        }
+        return `${base} ${styles[match[1]] || '' }`
+      }
+    ]
   ]
 })

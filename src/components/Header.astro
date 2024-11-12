@@ -1,5 +1,5 @@
 ---
-import Tooltip  from "./utils/Tooltip.astro";
+import OtdmButton from "./utils/OtdmButton.astro";
 ---
 <header class="sticky top-0 w-full h-20 bg-otdm-primary text-otdm-text">
   <div class="flex items-center h-full px-6 py-4">
@@ -7,28 +7,11 @@ import Tooltip  from "./utils/Tooltip.astro";
       <a class="text-2xl text-nowrap" href="/">おてだま</a>
     </div>
     <div class="grow"></div>
-    <nav class="flex gap-3 text-4xl">
-      <Tooltip name = ドキュメント>
-        <a class="btn-(base docs)" href = "/docs">
-          <div class="i-tabler:notes size-1em"></div>
-        </a>
-      </Tooltip>
-      <Tooltip name = ダウンロード>
-        <a class="btn-(base download)" href = "/download">
-          <div class="i-tabler:download size-1em"></div>
-        </a>
-      </Tooltip>
-      <Tooltip name = GitHub>
-        <a class="btn-(base github)" href = "https://github.com/Otdm-Project">
-          <div class="i-custom:github size-1em"></div>
-        </a>
-      </Tooltip>
-      <button class="btn-(base moon)">
-        <div class="i-tabler:moon size-1em"></div>
-      </button>
-      <button class="btn-(base-menu menu)">
-        <div class="i-tabler:menu-2 size-1em"></div>
-      </button>
+      <OtdmButton id = docs mobileHidden />
+      <OtdmButton id = download mobileHidden />
+      <OtdmButton id = github mobileHidden />
+      <OtdmButton id = moon mobileHidden />
+      <OtdmButton id = menu />
     </nav>
   </div>
 </header>
