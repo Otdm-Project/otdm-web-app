@@ -74,8 +74,8 @@ export default defineConfig({
       'box-tooltip': 'inline-block absolute inset-tooltip bg-docs-primary text-(xs docs-text nowrap) border-(2 docs-secondary) p-2 rounded-md transition pointer-events-none',
     },
     [
-    /^btn-(.*?)$/, match => {
-      const base = 'flex justify-center items-center size-12 rounded-lg'
+    /^btn-(.+?)(-style)?$/, match => {
+      const base = 'flex justify-center items-center rounded-lg size-12 '
       const styles: { [key: string]: string } = {
           search: 'bg-cyan-500 hover:bg-cyan-600 sm:(text-slate-200 bg-blue-900 hover:bg-blue-950)',
           docs: 'text-orange-900 bg-orange-400 hover:bg-orange-500',
@@ -85,6 +85,15 @@ export default defineConfig({
           sun: 'text-orange-300 bg-sky-100 hover:bg-sky-300',
           menu: 'bg-cyan-500 hover:bg-cyan-600 sm:(text-green-900 bg-green-500 hover:bg-green-600)',
         }
+
+        if(match[1] === 'base'){
+          return base
+        }
+
+        if (match[2]){
+          return styles[match[1]] || ''
+        }
+
         return `${base} ${styles[match[1]] || '' }`
       }
     ]
