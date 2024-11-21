@@ -22,6 +22,7 @@
   "devDependencies": {
     "@iconify-json/tabler": "^1.2.6",
     "@iconify/utils": "^2.1.33",
+    "@types/node": "^22.9.1",
     "@unocss/preset-icons": "^0.63.6",
     "unocss": "^0.63.6"
   }
