@@ -5,8 +5,9 @@ import { isDevelopment } from '@/libs/runtime';
 
 declare const window: PagefindWindow;
 
-export default function Search(){
-
+export default function Search(props: {
+  setIsVisible: (value: boolean) => void
+}){
   const [query, setQuery] = createSignal('');
   const [results, setResults] = createSignal<ResultType[]>([]);
 
@@ -41,7 +42,7 @@ export default function Search(){
   return (
     <div>
       <input
-        class="block w-32 h-full p-2 m-auto text-lg btn-search-style focus:outline-unset"
+        class="block max-w-48 h-full p-2 m-auto text-lg btn-search-style focus:outline-unset placeholder-otdm-preh"
         type="text"
         placeholder="検索"
         value={query()}
@@ -51,7 +52,15 @@ export default function Search(){
         }}
       />
       <Portal>
-        <div id="results">
+        <div
+          class="fixed z-5 inset-0 bg-black bg-opacity-50"
+          onClick={() => props.setIsVisible(false)}
+        />
+        <div
+          id="results"
+          class="fixed top-30 left-0 right-0 z-8 w-100vw h-80vh m-auto p-4 overscroll-contain bg-docs-primary border-(4 otdm-secondary) sm:(w-80vw h-80vh)"
+          onClick={(e) => e.stopPropagation()}
+          >
           {<h2>検索結果 ({results().length}件)</h2>}
           {results().map((result) => (
             <ResultItems key={result.id} result={result} />
@@ -93,4 +102,3 @@ const ResultItems = (props: {
     </Show>
   );
 }
-

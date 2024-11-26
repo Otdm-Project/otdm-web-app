@@ -46,6 +46,7 @@ export default defineConfig({
         primary : "theme('colors.cyan.500')",
         secondary : "theme('colors.cyan.700')",
         text : "theme('colors.zinc.50')",
+        preh: "theme('colors.zinc.300')",
       },
       docs:{
         primary : "rgb(247,247,247)",
