@@ -10,8 +10,8 @@ export default function Search(props: {
 }){
   const [query, setQuery] = createSignal('');
   const [results, setResults] = createSignal<ResultType[]>([]);
+  let inputRef: HTMLInputElement | undefined;
 
-  
   async function loadPagefind() {
     if (typeof window.pagefind === 'undefined') {
       const pagefindPath = isDevelopment ? "../../../dist/pagefind/pagefind.js" : "/pagefind/pagefind.js"
@@ -37,12 +37,16 @@ export default function Search(props: {
 
   onMount(()  => {
     loadPagefind();
+    if (inputRef) {
+      inputRef.focus();
+    }
   })
 
   return (
     <div>
       <input
-        class="block max-w-48 h-full p-2 m-auto text-lg btn-search-style focus:outline-unset placeholder-otdm-preh"
+        ref={inputRef}
+        class="block max-w-36 h-full p-2 m-auto text-lg btn-search-style focus:outline-unset placeholder-otdm-preh"
         type="text"
         placeholder="検索"
         value={query()}
@@ -58,7 +62,7 @@ export default function Search(props: {
         />
         <div
           id="results"
-          class="fixed top-30 left-0 right-0 z-8 w-100vw h-80vh m-auto p-4 overscroll-contain bg-docs-primary border-(4 otdm-secondary) sm:(w-80vw h-80vh)"
+          class="fixed top-20 left-0 right-0 z-8 w-full h-[calc(100%-5rem)] m-auto p-4 overscroll-contain bg-docs-primary border-(8 otdm-secondary) sm:(w-80vw h-80vh top-30 rounded-xl)"
           onClick={(e) => e.stopPropagation()}
           >
           {<h2>検索結果 ({results().length}件)</h2>}
@@ -94,9 +98,10 @@ const ResultItems = (props: {
     <Show when={data()}>
       {(resultData) => (
         <div>
-          <a href={resultData().url.replace('/dist', '')}>
-            <p innerHTML={resultData().excerpt} />
-          </a>
+          <a
+            href={resultData().url.replace('/dist', '')}
+            innerHTML={resultData().excerpt}
+            />
         </div>
       )}
     </Show>

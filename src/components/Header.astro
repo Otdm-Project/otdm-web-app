@@ -3,11 +3,8 @@ import OtdmButton from "./utils/OtdmButton.astro";
 import { SearchBar } from "./utils/SearchBar";
 ---
 <header class="sticky z-10 top-0 w-full h-20 bg-otdm-primary text-otdm-text">
-  <div class="flex items-center h-full px-6 py-4">
-    <div>
-      <a class="text-2xl text-nowrap" href="/">おてだま</a>
-    </div>
-    <div class="grow"></div>
+  <div class="flex justify-between items-center gap-3 h-full px-2 sm:px-6 py-4">
+    <a class="text-2xl text-nowrap" href="/">おてだま</a>
     <nav class="flex gap-3 h-12 text-4xl">
       <SearchBar client:idle />
       <OtdmButton id = docs mobileHidden />
