@@ -1,0 +1,4 @@
+site: dist
+output-path: public/pagefind
+glob: "**/*/*.{html}"
+exclude_selectors: ["[id^='nav-']"]
