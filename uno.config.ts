@@ -53,6 +53,7 @@ export default defineConfig({
         secondary : "rgb(255,228,181)",
         text : "theme('colors.zinc.700')",
         link : "theme('colors.sky.500')",
+        hover: "theme('colors.zinc.300')",
       }
     }
   },

@@ -2,6 +2,7 @@ import { createSignal, createEffect, Show, onMount } from 'solid-js';
 import { Portal } from 'solid-js/web';
 import type { PagefindWindow, ResultType, ResultData } from '@/types/pagefind';
 import { isDevelopment } from '@/libs/runtime';
+import { XButton } from './XButton';
 
 declare const window: PagefindWindow;
 
@@ -65,6 +66,7 @@ export default function Search(props: {
           class="z-6 fixed top-20 left-0 right-0 w-full h-[calc(100%-5rem)] m-auto p-5 overscroll-contain bg-docs-primary border-(8 otdm-secondary) sm:(w-80vw h-80vh top-30 rounded-xl)"
           onClick={(e) => e.stopPropagation()}
           >
+          <XButton onClick={props.handleVisible} />
           {<h2>検索結果 ({results().length}件)</h2>}
           {results().map((result) => (
             <ResultItems key={result.id} result={result} />
