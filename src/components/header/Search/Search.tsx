@@ -2,7 +2,7 @@ import { createSignal, createEffect, Show, onMount } from 'solid-js';
 import { Portal } from 'solid-js/web';
 import type { PagefindWindow, ResultType, ResultData } from '@/types/pagefind';
 import { isDevelopment } from '@/libs/runtime';
-import { XButton } from './XButton';
+import { XButton } from '@/components/utils/XButton';
 
 declare const window: PagefindWindow;
 
@@ -15,7 +15,7 @@ export default function Search(props: {
 
   async function loadPagefind() {
     if (typeof window.pagefind === 'undefined') {
-      const pagefindPath = isDevelopment ? "../../../dist/pagefind/pagefind.js" : "/pagefind/pagefind.js"
+      const pagefindPath = isDevelopment ? "../../../../dist/pagefind/pagefind.js" : "/pagefind/pagefind.js"
       try {
         const pagefind = (await import(/* @vite-ignore */ pagefindPath));
         window.pagefind = pagefind;
