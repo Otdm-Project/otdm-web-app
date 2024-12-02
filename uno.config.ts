@@ -52,6 +52,7 @@ export default defineConfig({
         primary : "rgb(247,247,247)",
         secondary : "rgb(255,228,181)",
         text : "theme('colors.zinc.700')",
+        head: "theme('colors.zinc.800')",
         link : "theme('colors.sky.500')",
         hover: "theme('colors.zinc.300')",
       }
@@ -62,6 +63,12 @@ export default defineConfig({
       *:focus-visible {
         outline: 3px solid theme('colors.cyan.900');
         border-radius: 2px;
+      }
+      mark {
+        padding: 0 0.25em;
+        background-color: theme('colors.cyan.900');
+        color: theme('colors.slate.100');
+        border-radius: 4px;
       }
     `
   }],

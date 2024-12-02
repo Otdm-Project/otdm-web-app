@@ -1,8 +1,7 @@
 import { createSignal, createEffect, Show, onMount } from 'solid-js';
-import { Portal } from 'solid-js/web';
 import type { PagefindWindow, ResultType, ResultData } from '@/types/pagefind';
 import { isDevelopment } from '@/libs/runtime';
-import { XButton } from '@/components/utils/XButton';
+import { Modal } from '@/components/utils/Modal';
 
 declare const window: PagefindWindow;
 
@@ -56,23 +55,16 @@ export default function Search(props: {
           handleSearch();
         }}
       />
-      <Portal>
-        <div
-          class="z-5 fixed inset-0 bg-black bg-opacity-50"
-          onClick={props.handleVisible}
-        />
-        <div
-          id="results"
-          class="z-6 fixed top-20 left-0 right-0 w-full h-[calc(100%-5rem)] m-auto p-5 overscroll-contain bg-docs-primary border-(8 otdm-secondary) sm:(w-80vw h-80vh top-30 rounded-xl)"
-          onClick={(e) => e.stopPropagation()}
-          >
-          <XButton onClick={props.handleVisible} />
-          {<h2>検索結果 ({results().length}件)</h2>}
+      <Modal
+        handleVisible={props.handleVisible}
+        >
+        <div class="text-docs-head">
+          <h2 class="mb-4">検索結果 {results().length}件</h2>
           {results().map((result) => (
             <ResultItems key={result.id} result={result} />
           ))}
         </div>
-      </Portal>
+      </Modal>
     </div>
   );
 }
@@ -99,10 +91,11 @@ const ResultItems = (props: {
   return (
     <Show when={data()}>
       {(resultData) => (
-        <div>
+        <div class="mb-1">
           <a
             href={resultData().url.replace('/dist', '')}
             innerHTML={resultData().excerpt}
+            class="line-height-relaxed hover:border-(docs-link b-2)"
             />
         </div>
       )}

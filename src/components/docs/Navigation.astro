@@ -23,7 +23,7 @@ docs.sort((a, b) => {
   <div class="flex flex-col gap-8 sticky top-20 p-8">
     <div class="flex flex-col gap-2">
       {docs.map((doc) => (
-        <a class="p-1 rounded-md outline-cyan-600 hover:bg-slate-950/5" href={doc.url}>{doc.frontmatter.header}</a>
+        <a class="p-2 rounded-md text-docs-head outline-cyan-600 hover:bg-zinc-950/5" href={doc.url}>{doc.frontmatter.header}</a>
       ))}
     </div>
   </div>
