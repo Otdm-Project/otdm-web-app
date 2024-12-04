@@ -1,6 +1,5 @@
 import { createEffect, createSignal,createRoot } from 'solid-js';
 
-
 const [_isSearchOpen, _setIsSearchOpen] = createSignal(false);
 const [_isMenuOpen, _setIsMenuOpen] = createSignal(false);
 
@@ -9,6 +8,10 @@ export const isMenuOpen = _isMenuOpen;
 
 export function toggleSearch() {
   _setIsSearchOpen(open => !open);
+}
+
+export function toggleMenu() {
+  _setIsMenuOpen(open => !open);
 }
 
 createRoot(() => {
