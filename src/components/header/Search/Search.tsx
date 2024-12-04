@@ -6,8 +6,8 @@ import { Modal } from '@/components/utils/Modal';
 declare const window: PagefindWindow;
 
 export default function Search(props: {
-  handleVisible: () => void;
-}){
+    toggleSearch: () => void;
+  }){
   const [query, setQuery] = createSignal('');
   const [results, setResults] = createSignal<ResultType[]>([]);
   let inputRef: HTMLInputElement | undefined;
@@ -55,9 +55,7 @@ export default function Search(props: {
           handleSearch();
         }}
       />
-      <Modal
-        handleVisible={props.handleVisible}
-        >
+      <Modal toggleOpen={props.toggleSearch}>
         <div class="text-docs-head">
           <h2 class="mb-4">検索結果 {results().length}件</h2>
           {results().map((result) => (
