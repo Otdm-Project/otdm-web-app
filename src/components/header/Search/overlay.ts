@@ -12,13 +12,12 @@ export function toggleSearch() {
 }
 
 createRoot(() => {
-
   createEffect(() => {
     if (_isSearchOpen()) {
       _setIsMenuOpen(false);
     }
   });
-
+  
   createEffect(() => {
     if (_isMenuOpen()) {
       _setIsSearchOpen(false);

@@ -2,12 +2,11 @@ import { createSignal, createEffect, Show, onMount } from 'solid-js';
 import type { PagefindWindow, ResultType, ResultData } from '@/types/pagefind';
 import { isDevelopment } from '@/libs/runtime';
 import { Modal } from '@/components/utils/Modal';
+import { toggleSearch } from "./overlay";
 
 declare const window: PagefindWindow;
 
-export default function Search(props: {
-    toggleSearch: () => void;
-  }){
+export default function Search(){
   const [query, setQuery] = createSignal('');
   const [results, setResults] = createSignal<ResultType[]>([]);
   let inputRef: HTMLInputElement | undefined;
@@ -55,7 +54,7 @@ export default function Search(props: {
           handleSearch();
         }}
       />
-      <Modal toggleOpen={props.toggleSearch}>
+      <Modal toggleOpen={toggleSearch}>
         <div class="text-docs-head">
           <h2 class="mb-4">検索結果 {results().length}件</h2>
           {results().map((result) => (
