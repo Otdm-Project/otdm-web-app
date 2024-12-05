@@ -1,7 +1,7 @@
 import { createSignal, createEffect, Show, onMount } from 'solid-js';
 import type { PagefindWindow, ResultType, ResultData } from '@/types/pagefind';
 import { isDevelopment } from '@/libs/runtime';
-import { Modal } from '@/components/utils/Modal';
+import { Modal } from '../Modal';
 import { toggleSearch } from "../overlay";
 
 declare const window: PagefindWindow;

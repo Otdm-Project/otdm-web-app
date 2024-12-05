@@ -1,4 +1,4 @@
-import { Modal } from "@/components/utils/Modal";
+import { Modal } from "../Modal";
 import { toggleMenu } from "../overlay";
 
 export default function Menu(){
