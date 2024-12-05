@@ -1,5 +1,5 @@
 import { Modal } from "@/components/utils/Modal";
-import { toggleMenu } from "../../header/overlay";
+import { toggleMenu } from "../overlay";
 
 export default function Menu(){
   return(

@@ -1,5 +1,5 @@
 import { Show } from "solid-js";
-import { isSearchOpen, toggleSearch } from "../../header/overlay";
+import { isSearchOpen, toggleSearch } from "../overlay";
 import Search from "./Search";
 
 export default function SearchBar() {

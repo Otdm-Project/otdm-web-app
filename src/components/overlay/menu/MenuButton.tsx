@@ -1,5 +1,5 @@
 import { Show } from "solid-js";
-import { isMenuOpen, toggleMenu } from "../../header/overlay";
+import { isMenuOpen, toggleMenu } from "../overlay";
 import Menu from "./Menu";
 
 export default function MenuButton(){
