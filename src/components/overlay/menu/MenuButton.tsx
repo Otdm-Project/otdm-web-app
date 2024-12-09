@@ -6,7 +6,7 @@ export default function MenuButton(){
   return(
     <>
       <button class="btn-menu" onClick={toggleMenu}>
-        <div class="relative h-1em w-1em">
+        <div class="relative h-1em w-1em overflow-hidden">
           <div class={`absolute transition-all duration-300 ${
             isMenuOpen() ? '-translate-x-full opacity-0 invisible' : 'translate-x-0'
             }`}>
