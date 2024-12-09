@@ -1,18 +1,25 @@
 import { Portal } from 'solid-js/web';
 
+const sideBarStyle = "border-(l-8 otdm-secondary) sm:(top-20 right-0 w-50vw) animate-sidebar";
+const modalStyle = "border-(8 otdm-secondary) sm:(top-30 inset-x-0 w-80vw h-80vh rounded-xl) animate-modal";
+
 export function Modal (props: {
+  sideBar ?: boolean;
   toggleOpen: () => void;
   children?: any;
 }) {
   return (
     <Portal>
       <div
-        class="z-5 fixed inset-0 bg-black bg-opacity-50"
+        class="z-5 fixed inset-0 bg-black bg-opacity-50 animate-modal"
         onClick={props.toggleOpen}
       />
-      <div
+      <div 
         id="results"
-        class="z-6 fixed top-20 left-0 right-0 w-full h-[calc(100%-5rem)] m-auto p-5 overscroll-contain bg-docs-primary border-(8 otdm-secondary) sm:(w-80vw h-80vh top-30 rounded-xl)"
+        class={`
+          z-6 fixed top-20 w-full h-[calc(100%-5rem)] m-auto p-5 overscroll-contain bg-docs-primary
+          ${props.sideBar ? sideBarStyle : modalStyle}
+        `}
       >
       <XButton onClick={props.toggleOpen} />
       {props.children}

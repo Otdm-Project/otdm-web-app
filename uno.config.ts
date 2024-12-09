@@ -40,6 +40,22 @@ export default defineConfig({
     transformerVariantGroup(),
   ],
   theme: {
+    animation: {
+      keyframes: {
+        'modal': '{from{opacity:0}to{opacity:1}}',
+        'searchbar': '{from{max-width:0}to{max-width: 9rem}}',
+        'sidebar': '{from{transform:translateX(100%)}to{transform:translateX(0)}}',
+      },
+      durations: {
+        'searchbar': '300ms',
+        'modal': '300ms',
+        'sidebar': '300ms',
+      },
+      timingFns: {
+        'searchbar': 'ease-in-out',
+        'sidebar': 'ease-in-out',
+      },
+    },
     colors:{
       otdm:{
         neutral : "rgb(255,252,246)",
