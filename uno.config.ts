@@ -42,15 +42,22 @@ export default defineConfig({
   theme: {
     animation: {
       keyframes: {
-        'modal': '{from{opacity:0}to{opacity:1}}',
-        'sidebar': '{from{transform:translateX(100%)}to{transform:translateX(0)}}',
+        'modal-in': '{from{opacity:0}to{opacity:1}}',
+        'modal-out': '{from{opacity:1}to{opacity:0}}',
+        'sidebar-in': '{from{transform:translateX(100%)}to{transform:translateX(0)}}',
+        'sidebar-out': '{from{transform:translateX(0)}to{transform:translateX(100%)}}',
       },
       durations: {
-        'modal': '300ms',
-        'sidebar': '300ms',
+        'modal-in': '500ms',
+        'modal-out': '500ms',
+        'sidebar-in': '500ms',
+        'sidebar-out': '500ms',
       },
       timingFns: {
-        'sidebar': 'ease-in-out',
+        'modal-in': 'ease-in-out',
+        'modal-out': 'ease-in-out',
+        'sidebar-in': 'ease-in-out',
+        'sidebar-out': 'ease-in-out'
       },
     },
     colors:{
@@ -88,6 +95,7 @@ export default defineConfig({
   rules: [
     ["inset-tooltip", { "bottom": "-85%", "left": "50%", "transform": "translateX(-50%)" }],
     ["caret-nav", { "caret-color": "theme('colors.sky.600')" }],
+    ["behavior-allow", {"transition-behavior": "allow-discrete"}]
   ],
   shortcuts: [
     {

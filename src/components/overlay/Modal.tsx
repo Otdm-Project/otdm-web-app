@@ -1,24 +1,40 @@
 import { Portal } from 'solid-js/web';
-
-const sideBarStyle = "border-(l-8 otdm-secondary) sm:(top-20 right-0 w-50vw) animate-sidebar";
-const modalStyle = "border-(8 otdm-secondary) sm:(top-30 inset-x-0 w-80vw h-80vh rounded-xl) animate-modal";
+import { isClosing, isMenuOpen, isSearchOpen} from './overlay';
 
 export function Modal (props: {
   sideBar ?: boolean;
   toggleOpen: () => void;
   children?: any;
 }) {
+  const sideBarStyle = `border-(l-8 otdm-secondary) sm:(top-20 right-0 w-50vw)`;
+  const modalStyle = `border-(8 otdm-secondary) sm:(top-30 inset-x-0 w-80vw h-80vh rounded-xl)`;
+
   return (
     <Portal>
       <div
-        class="z-5 fixed inset-0 bg-black bg-opacity-50 animate-modal"
+        id="modal-background"
+        class={`z-5 fixed inset-0 bg-black bg-opacity-50 ${
+          (isMenuOpen() || isSearchOpen()) && !isClosing() 
+            ? 'animate-modal-in' 
+            : 'animate-modal-out'
+        }`}
         onClick={props.toggleOpen}
       />
-      <div 
-        id="results"
-        class={`
-          z-6 fixed top-20 w-full h-[calc(100%-5rem)] m-auto p-5 overscroll-contain bg-docs-primary
-          ${props.sideBar ? sideBarStyle : modalStyle}
+      <div
+        id="modal-results"
+        class={`z-6 fixed top-20 w-full h-[calc(100%-5rem)] m-auto p-5 overscroll-contain bg-docs-primary
+          ${props.sideBar
+            ? `${sideBarStyle} ${
+              isMenuOpen() && !isClosing()
+                ? 'animate-sidebar-in' 
+                : 'animate-sidebar-out'
+            }`
+            : `${modalStyle} ${
+              isSearchOpen() && !isClosing()
+                ? 'animate-modal-in' 
+                : 'animate-modal-out'
+            }`
+          }
         `}
       >
       <XButton onClick={props.toggleOpen} />
