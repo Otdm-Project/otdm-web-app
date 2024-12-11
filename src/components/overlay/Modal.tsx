@@ -6,9 +6,9 @@ export function Modal (props: {
   toggleOpen: () => void;
   children?: any;
 }) {
-  const sideBarStyle = `border-(l-8 otdm-secondary) sm:(top-20 right-0 w-50vw)`;
-  const modalStyle = `border-(8 otdm-secondary) sm:(top-30 inset-x-0 w-80vw h-80vh rounded-xl)`;
-
+  const sideBarStyle = `right-0 w-80% h-[calc(100%-5rem)] border-(l-8 otdm-secondary) md:w-50%`;
+  const modalStyle = `w-full h-70vh m-auto border-(b-8 otdm-secondary) sm:(top-30 inset-x-0 w-80% h-80vh border-8 rounded-xl)`;
+  
   return (
     <Portal>
       <div
@@ -22,7 +22,7 @@ export function Modal (props: {
       />
       <div
         id="modal-results"
-        class={`z-6 fixed top-20 w-full h-[calc(100%-5rem)] m-auto p-5 overscroll-contain bg-docs-primary
+        class={`z-6 fixed top-20 p-5 overscroll-contain bg-docs-primary
           ${props.sideBar
             ? `${sideBarStyle} ${
               isMenuOpen() && !isClosing()
