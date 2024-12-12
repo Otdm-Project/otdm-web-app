@@ -42,11 +42,11 @@ export default function Search(){
   })
 
   return (
-    <div>
+    <>
       <input
         ref={inputRef}
         class="block max-w-36 h-full p-2 m-auto text-lg btn-search-style focus:outline-unset placeholder-otdm-preh"
-        type="text"
+        type="search"
         placeholder="検索"
         value={query()}
         onInput={(e) => {
@@ -62,7 +62,7 @@ export default function Search(){
           ))}
         </div>
       </Modal>
-    </div>
+    </>
   );
 }
 
