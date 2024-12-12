@@ -1,16 +1,39 @@
 ---
 import { navLinks } from "@/data/navLinks";
+type dataType = {
+  name: string;
+  href: string;
+  blank?: boolean;
+  style?: string;
+  icon?: string;
+};
 
-const props = navLinks[Astro.props.id];
+const data: Record<string, dataType> = {
+  docs : {
+    ...navLinks.docs,
+    style : "btn-docs",
+    icon : "i-tabler:notes",
+  },
+  download : {
+    ...navLinks.download,
+    style : "btn-download",
+    icon : "i-tabler:download",
+  },
+  github : {
+    ...navLinks.github,
+    style : "btn-github",
+    icon : "i-custom:github",
+  },
+}
+const { id } = Astro.props;
+const props = data[id];
 ---
 
 <div class="hidden sm:block relative group">
   <a class={props.style} href={props.href} {...props.blank ? {target: "_blank", rel: "noopener"} : {}}>
-    <div class={props.icon + " size-1em"}></div>
-    {props.name && (
-      <span class="box-tooltip opacity-0 group-hover:opacity-100">
-        {props.name}
-      </span>
-    )}
+    <div class={`${props.icon} size-1em`}></div>
+    <span class="box-tooltip opacity-0 group-hover:opacity-100">
+      {props.name}
+    </span>
   </a>
 </div>
