@@ -1,69 +1,16 @@
 ---
-type Props = {
-  id: string;
-  mobileHidden?: boolean;
-}
+import { navLinks } from "@/data/navLinks";
 
-type ButtonProps = {
-  style: string;
-  href?: string;
-  icon: string;
-  tooltip?: string;
-};
-
-const buttonProps: Record<string, ButtonProps> = {
-  docs : {
-    style : "btn-docs",
-    href : "/docs",
-    icon : "i-tabler:notes",
-    tooltip : "ドキュメント"
-  },
-  download : {
-    style : "btn-download",
-    href : "/download",
-    icon : "i-tabler:download",
-    tooltip : "ダウンロード"
-  },
-  github : {
-    style : "btn-github",
-    href : "https://github.com/Otdm-Project",
-    icon : "i-custom:github",
-    tooltip : "GitHub"
-  },
-  moon : {
-    style : "btn-moon",
-    icon : "i-tabler:moon",
-    tooltip : "ダークモード"
-  },
-  sun : {
-    style : "btn-sun",
-    icon : "i-tabler:sun",
-    tooltip : "ライトモード"
-  },
-}
-
-const { id, mobileHidden = false} = Astro.props;
-const props = buttonProps[id];
+const props = navLinks[Astro.props.id];
 ---
 
-<div class=`${mobileHidden && "hidden sm:block"} relative group`>
-  {props.href ? (
-    <a class={props.style} href={props.href}>
-      <div class={props.icon + " size-1em"}></div>
-      {props.tooltip && (
-        <span class="box-tooltip opacity-0 group-hover:opacity-100">
-          {props.tooltip}
-        </span>
-      )}
-    </a>
-  ) : (
-    <button class={props.style}>
-      <div class={props.icon + " size-1em"}></div>
-      {props.tooltip && (
-        <span class="box-tooltip opacity-0 group-hover:opacity-100">
-          {props.tooltip}
-        </span>
-      )}
-    </button>
-  )}
+<div class="hidden sm:block relative group">
+  <a class={props.style} href={props.href} {...props.blank ? {target: "_blank", rel: "noopener"} : {}}>
+    <div class={props.icon + " size-1em"}></div>
+    {props.name && (
+      <span class="box-tooltip opacity-0 group-hover:opacity-100">
+        {props.name}
+      </span>
+    )}
+  </a>
 </div>
