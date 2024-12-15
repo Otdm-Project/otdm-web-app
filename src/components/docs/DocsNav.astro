@@ -1,22 +1,7 @@
 ---
-const docs = await Astro.glob('@/pages/docs/*.md')
+import { docsList } from "@/components/utils/docsList";
 
-//markdownファイル名を取得
-const getFileName = (path: string) => {
-  const parts = path.split('/');
-  const fileName = parts[parts.length - 1];
-  return fileName.replace('.md', '');
-};
-
-//markdownファイルの順番を指定
-const order = ['index', 'setup', 'quick-start', 'command', 'error'];
-
-//markdownファイルの順番に並び替え
-docs.sort((a, b) => {
-  const nameA = getFileName(a.file);
-  const nameB = getFileName(b.file);
-  return order.indexOf(nameA) - order.indexOf(nameB);
-});
+const docs = docsList();
 ---
 
 <div id="nav-docs" class="md:(flex flex-col) hidden min-w-64 border-(r-2 docs-secondary)">
