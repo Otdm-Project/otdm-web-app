@@ -30,10 +30,10 @@ function NavLink(props: {id: string}) {
         //疑似要素-webkit-details-markerを使用したくない為、divで代用
         <div>
           <div
-            class="flex gap-1 px-4 py-2 items-center rounded-lg hover:bg-docs-hover cursor-pointer"
+            class="flex gap-1 px-5 py-2 items-center rounded-lg hover:bg-docs-hover cursor-pointer"
             onClick={() => setOpen(!open())}
           >
-            <div class="i-tabler:chevron-down -ml-4"
+            <div class="i-tabler:chevron-down -ml-5"
             classList={{ "transform rotate-180": open() }}
             />
             {navItem.name}
@@ -48,7 +48,7 @@ function NavLink(props: {id: string}) {
           </div>
         </div>
       ) : (
-        <li class="px-4 py-2 rounded-lg hover:bg-docs-hover">
+        <li class="px-5 py-2 rounded-lg hover:bg-docs-hover">
           <a
             href={navItem.href}
             {...navItem.blank && {target: "_blank", rel: "noopener"}}
