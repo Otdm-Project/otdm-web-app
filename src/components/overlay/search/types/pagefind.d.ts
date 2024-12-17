@@ -27,8 +27,10 @@ export type ResultType = {
   data: () => Promise<ResultData>;
 };
 
-export interface PagefindWindow extends Window {
-  pagefind?: {
-    search: (query: string) => Promise<{ results: ResultType[] }>;
-  };
+declare global {
+  interface Window {
+    pagefind?: {
+      search: (query: string) => Promise<{ results: ResultType[] }>;
+    };
+  }
 }
