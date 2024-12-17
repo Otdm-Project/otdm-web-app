@@ -32,6 +32,7 @@ export default defineConfig({
         "h4":{ "font-size": "1rem" },
         "h5":{ "font-size": "0.875rem" },
         "h6":{ "font-size": "0.75rem" },
+        "pre":{ "padding": "16px" }
       }
     })
   ],

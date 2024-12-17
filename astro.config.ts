@@ -10,5 +10,10 @@ export default defineConfig({
   ],
   image: {
     domains: ["github.com"],
+  },
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+    }
   }
 });
