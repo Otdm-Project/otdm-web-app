@@ -12,18 +12,18 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/solid-js": "^4.4.2",
-    "astro": "4.16.10",
+    "@astrojs/solid-js": "^5.0.0",
+    "astro": "5.0.8",
     "pagefind": "^1.2.0",
     "solid-js": "^1.9.3",
-    "typescript": "^5.6.2"
+    "typescript": "^5.7.2"
   },
   "packageManager": "yarn@4.4.1",
   "devDependencies": {
-    "@iconify-json/tabler": "^1.2.6",
-    "@iconify/utils": "^2.1.33",
-    "@types/node": "^22.9.1",
-    "@unocss/preset-icons": "^0.63.6",
-    "unocss": "^0.63.6"
+    "@iconify-json/tabler": "^1.2.13",
+    "@iconify/utils": "^2.2.1",
+    "@types/node": "^22.10.2",
+    "@unocss/preset-icons": "^0.65.1",
+    "unocss": "^0.65.1"
   }
 }
