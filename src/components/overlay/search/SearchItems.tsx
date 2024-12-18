@@ -11,7 +11,7 @@ export const SearchItems = (props: {
     async function fetchData() {
       try {
         const resultData = await props.result.data();
-        console.log('Fetched data:', resultData);
+        //console.log('Fetched data:', resultData);
         setData(resultData);
       } catch (error) {
         console.error('Fetch result data error', error);
@@ -23,12 +23,13 @@ export const SearchItems = (props: {
   return (
     <Show when={data()}>
       {(resultData) => (
-        <div class="mb-1">
-          <a
-            href={resultData().url.replace('/dist', '')}
-            innerHTML={resultData().excerpt}
-            class="line-height-relaxed hover:border-(docs-link b-2)"
-            />
+        <div class="p-2 my-4 border-(zinc-300 b-2)">
+          <div class="p-2 rounded-lg hover:bg-docs-hover">
+            <a href={resultData().url.replace('/dist', '')}>
+              <h3 class="text-xl mb-4">{resultData().meta.title}</h3>
+              <p innerHTML={resultData().excerpt}></p>
+            </a>
+          </div>
         </div>
       )}
     </Show>

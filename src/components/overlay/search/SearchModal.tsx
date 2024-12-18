@@ -15,6 +15,10 @@ export function SearchModal() {
       const pagefindPath = isDevelopment ? "../../../../dist/pagefind/pagefind.js" : "/pagefind/pagefind.js"
       try {
         const pagefind = (await import(/* @vite-ignore */ pagefindPath));
+        await pagefind.options({
+          "excerptLength": 24,
+        })
+        pagefind.init();
         window.pagefind = pagefind;
       } catch (error) {
         console.error("Failed to load Pagefind:", error);
@@ -55,7 +59,7 @@ export function SearchModal() {
       />
       <Modal toggleOpen={toggleSearch}>
         <div class="text-docs-head">
-          <h2 class="mb-4">検索結果 {results().length}件</h2>
+          <h2>検索結果 {results().length}件</h2>
           {results().map((result) => (
             <SearchItems key={result.id} result={result} />
           ))}
