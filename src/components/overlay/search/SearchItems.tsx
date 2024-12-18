@@ -25,8 +25,8 @@ export const SearchItems = (props: {
       {(resultData) => (
         <div class="p-2 my-4 border-(zinc-300 b-2)">
           <div class="p-2 rounded-lg hover:bg-docs-hover">
-            <a href={resultData().url.replace('/dist', '')}>
-              <h3 class="text-xl mb-4">{resultData().meta.title}</h3>
+            <a href={resultData().sub_results[0].url.replace('/dist', '')}>
+              <h3 class="text-xl mb-4">{resultData().meta.title} &gt; {resultData().sub_results[0].title}</h3>
               <p innerHTML={resultData().excerpt}></p>
             </a>
           </div>
