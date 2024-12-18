@@ -1,4 +1,4 @@
-import type { ResultType, ResultData } from "./types/pagefind";
+import type { ResultType, ResultData } from "./pagefind";
 import { createSignal, createEffect, Show } from "solid-js";
 
 export const SearchItems = (props: { 

@@ -2,7 +2,7 @@ import { createSignal, onMount } from 'solid-js';
 import { SearchItems } from "./SearchItems";
 import { Modal } from '../Modal';
 import { toggleSearch } from '../overlay';
-import type { ResultType } from './types/pagefind';
+import type { ResultType } from './pagefind';
 import { isDevelopment } from '@/libs/runtime';
 
 export function SearchModal() {
