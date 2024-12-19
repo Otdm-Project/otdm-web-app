@@ -30,8 +30,9 @@ export function NavLink(props: {id: string}) {
           </div>
         </div>
       ) : (
-        <li class="px-5 py-2 rounded-lg hover:bg-docs-hover">
+        <li>
           <a
+            class="block px-5 py-2 rounded-lg hover:bg-docs-hover"
             href={navItem.href}
             {...navItem.blank && {target: "_blank", rel: "noopener"}}
           >
@@ -48,8 +49,10 @@ function DocsNavLink() {
   return (
     <div class="ml-4">
       {docs.map((doc) => (
-        <li class="p-2 mt-2 rounded-lg hover:bg-docs-hover">
-          <a href={doc.url}>{doc.frontmatter.header}</a>
+        <li>
+          <a href={doc.url} class="block p-2 mt-2 rounded-lg hover:bg-docs-hover">
+            {doc.frontmatter.header}
+          </a>
         </li>
       ))}
     </div>
