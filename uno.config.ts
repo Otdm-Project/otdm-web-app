@@ -81,6 +81,9 @@ export default defineConfig({
   },
   preflights: [{
     getCSS: () => `
+      [id] {
+        scroll-margin-top: 5rem;
+      }
       *:focus-visible {
         outline: 3px solid theme('colors.cyan.900');
         border-radius: 2px;
