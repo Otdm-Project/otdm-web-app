@@ -1,4 +1,4 @@
-import { createSignal, onMount } from 'solid-js';
+import { createSignal, For, onMount } from 'solid-js';
 import { SearchItems } from "./SearchItems";
 import { Modal } from '../Modal';
 import { toggleSearch } from '../overlay';
@@ -60,9 +60,9 @@ export function SearchModal() {
       <Modal toggleOpen={toggleSearch}>
         <div class="text-docs-head">
           <h2>検索結果 {results().length}件</h2>
-          {results().map((result) => (
-            <SearchItems key={result.id} result={result} />
-          ))}
+          <For each={results()}>
+            {(result) => <SearchItems key={result.id} result={result} />}
+          </For>
         </div>
       </Modal>
     </>

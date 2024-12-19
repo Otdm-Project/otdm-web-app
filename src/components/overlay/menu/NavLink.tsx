@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js";
+import { createSignal, For, Match, Switch } from "solid-js";
 import { navLinks } from "@/data/navLinks";
 import { docsList } from "@/components/utils/docsList";
 
@@ -7,16 +7,15 @@ export function NavLink(props: {id: string}) {
   const [open, setOpen] = createSignal(false);
   return (
     <div>
-      {props.id==="docs" ? (
-        //ドキュメントをアコーディオンで表示
-        //疑似要素-webkit-details-markerを使用したくない為、divで代用
-        <div>
+      <Switch>
+        <Match when={props.id==="docs"}>
           <div
             class="flex gap-1 px-5 py-2 items-center rounded-lg hover:bg-docs-hover cursor-pointer"
             onClick={() => setOpen(!open())}
           >
-            <div class="i-tabler:chevron-down -ml-5"
-            classList={{ "transform rotate-180": open() }}
+            <div
+              class="i-tabler:chevron-down -ml-5"
+              classList={{ "transform rotate-180": open() }}
             />
             {navItem.name}
           </div>
@@ -28,18 +27,15 @@ export function NavLink(props: {id: string}) {
               <DocsNavLink />
             </div>  
           </div>
-        </div>
-      ) : (
-        <li>
-          <a
-            class="block px-5 py-2 rounded-lg hover:bg-docs-hover"
-            href={navItem.href}
-            {...navItem.blank && {target: "_blank", rel: "noopener"}}
-          >
-            {navItem.name}
-          </a>
-        </li>
-      )}
+        </Match>
+        <Match when={props.id!=="docs"}>
+          <li>
+            <a class="block px-5 py-2 rounded-lg hover:bg-docs-hover" href={navItem.href} {...navItem.blank && {target: "_blank", rel: "noopener"}}>
+              {navItem.name}
+            </a>
+          </li>
+        </Match>        
+      </Switch>
     </div>
   )
 }
@@ -48,13 +44,15 @@ function DocsNavLink() {
   const docs = docsList();
   return (
     <div class="ml-4">
-      {docs.map((doc) => (
-        <li>
-          <a href={doc.url} class="block p-2 mt-2 rounded-lg hover:bg-docs-hover">
-            {doc.frontmatter.header}
-          </a>
-        </li>
-      ))}
+      <For each={docs}>
+        {(doc) => (
+          <li>
+            <a href={doc.url} class="block p-2 mt-2 rounded-lg hover:bg-docs-hover">
+              {doc.frontmatter.header}
+            </a>
+          </li>
+        )}
+      </For>
     </div>
   )
 }
