@@ -109,7 +109,7 @@ export default defineConfig({
     },
     [
     /^btn-(.+?)(-style)?$/, match => {
-      const base = 'flex justify-center items-center rounded-lg size-12 '
+      const base = 'grid place-content-center rounded-lg size-8 sm:size-12'
       const styles: { [key: string]: string } = {
           search: 'bg-cyan-500 hover:bg-cyan-600 sm:(text-slate-200 bg-blue-900 hover:bg-blue-950)',
           docs: 'text-orange-900 bg-orange-400 hover:bg-orange-500',
