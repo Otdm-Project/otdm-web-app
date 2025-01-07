@@ -63,9 +63,9 @@ export default defineConfig({
     },
     colors:{
       otdm:{
-        neutral : "rgb(255,252,246)",
         primary : "theme('colors.cyan.500')",
         secondary : "theme('colors.cyan.700')",
+        bg : "rgb(255,252,246)",
         text : "theme('colors.zinc.50')",
         preh: "theme('colors.zinc.300')",
       },
