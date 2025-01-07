@@ -43,11 +43,11 @@ export function NavLink(props: {id: string}) {
 function DocsNavLink() {
   const docs = docsList();
   return (
-    <div class="ml-4">
+    <div class="flex flex-col gap-2 mx-4 my-2">
       <For each={docs}>
         {(doc) => (
           <li>
-            <a href={doc.url} class="block p-2 mt-2 rounded-lg hover:bg-docs-hover">
+            <a href={doc.url} class="block p-2 rounded-lg hover:bg-docs-hover">
               {doc.frontmatter.header}
             </a>
           </li>
