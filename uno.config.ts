@@ -63,19 +63,19 @@ export default defineConfig({
     },
     colors:{
       otdm:{
-        primary : "theme('colors.cyan.500')",
-        secondary : "theme('colors.cyan.700')",
+        primary : "#06b6d4",
+        secondary : "#0e7490",
         bg : "rgb(255,252,246)",
-        text : "theme('colors.zinc.50')",
-        preh: "theme('colors.zinc.300')",
+        text : "#fafafa",
+        preh: "#d4d4d8",
       },
       docs:{
         primary : "rgb(247,247,247)",
         secondary : "rgb(255,228,181)",
-        text : "theme('colors.zinc.700')",
-        head: "theme('colors.zinc.800')",
-        link : "theme('colors.sky.500')",
-        hover: "theme('colors.zinc.300')",
+        text : "#3f3f46",
+        head: "#27272a",
+        link : "#0ea5e9",
+        hover: "#d4d4d8",
       }
     }
   },
@@ -85,20 +85,20 @@ export default defineConfig({
         scroll-margin-top: 5rem;
       }
       *:focus-visible {
-        outline: 3px solid theme('colors.cyan.900');
+        outline: 3px solid #164e63;
         border-radius: 2px;
       }
       mark {
         padding: 0 0.25em;
-        background-color: theme('colors.cyan.900');
-        color: theme('colors.slate.100');
+        background-color: #164e63;
+        color: #f4f4f5;
         border-radius: 4px;
       }
     `
   }],
   rules: [
     ["inset-tooltip", { "bottom": "-85%", "left": "50%", "transform": "translateX(-50%)" }],
-    ["caret-nav", { "caret-color": "theme('colors.sky.600')" }],
+    ["caret-nav", { "caret-color": "#0284c7" }],
     ["behavior-allow", {"transition-behavior": "allow-discrete"}]
   ],
   shortcuts: [
