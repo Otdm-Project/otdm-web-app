@@ -18,6 +18,10 @@ export const navLinks: Record<string, navLinksType> = {
     href : "https://github.com/Otdm-Project",
     blank : true,
   },
+  members : {
+    name : "開発メンバー",
+    href : "/members",
+  },
   privacy : {
     name : "プライバシーポリシー",
     href : "/privacy",

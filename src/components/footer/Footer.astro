@@ -1,11 +1,16 @@
 ---
 import ContributorCard from "./ContributorCard.astro";
+import { navLinks } from "@/data/navLinks";
+
+const terms = navLinks.terms;
+const privacy = navLinks.privacy;
+const members = navLinks.members;
 ---
 <footer class="flex flex-col items-center gap-4 p-4 bg-otdm-primary text-otdm-text">
-  <a class="hover:underline" href="/terms/">利用規約</a>
-  <a class="hover:underline" href="/privacy/">プライバシーポリシー</a>
+  <a class="hover:underline" href={terms.href}>{terms.name}</a>
+  <a class="hover:underline" href={privacy.href}>{privacy.name}</a>
   <div class="flex flex-col items-center gap-2">
-    <a class="hover:underline" href="/contributors/">貢献者</a>
+    <a class="hover:underline" href={members.href}>{members.name}</a>
     <ContributorCard />
   </div>
   <small>© 2024 Otdm Project</small>
