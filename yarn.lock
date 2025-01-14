@@ -1922,6 +1922,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@unocss/core@npm:0.65.4":
+  version: 0.65.4
+  resolution: "@unocss/core@npm:0.65.4"
+  checksum: 10c0/38f3985253423e9c7ae353dd218c4e4b2d9700fdf95de463fba26c1670b56600fd9c8404e54822e5d67e93ecdc218390ec4a1712ceba790aa5655db720b1a928
+  languageName: node
+  linkType: hard
+
 "@unocss/extractor-arbitrary-variants@npm:0.65.1":
   version: 0.65.1
   resolution: "@unocss/extractor-arbitrary-variants@npm:0.65.1"
@@ -1969,7 +1976,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unocss/preset-icons@npm:0.65.1, @unocss/preset-icons@npm:^0.65.1":
+"@unocss/preset-icons@npm:0.65.1":
   version: 0.65.1
   resolution: "@unocss/preset-icons@npm:0.65.1"
   dependencies:
@@ -1977,6 +1984,17 @@ __metadata:
     "@unocss/core": "npm:0.65.1"
     ofetch: "npm:^1.4.1"
   checksum: 10c0/459c0df210d33dfe46aff78804aa49213ad1ba665226f2e07b7355b55b9252ec65a01689a55f1739d87c18f60614a2f67d6beb3ca842ae2930632c9fe2fef3d8
+  languageName: node
+  linkType: hard
+
+"@unocss/preset-icons@npm:^0.65.4":
+  version: 0.65.4
+  resolution: "@unocss/preset-icons@npm:0.65.4"
+  dependencies:
+    "@iconify/utils": "npm:^2.2.1"
+    "@unocss/core": "npm:0.65.4"
+    ofetch: "npm:^1.4.1"
+  checksum: 10c0/1680730bb33b8782b7c037d86a4b6efa52ef18bc0b1e1aa730dafe406efbb0cc4408b7e1d6a4987fdc17f6bd205a001e22702859ea6732cd0378a18663619b9f
   languageName: node
   linkType: hard
 
@@ -2050,10 +2068,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unocss/reset@npm:^65.4.0":
-  version: 65.4.0
-  resolution: "@unocss/reset@npm:65.4.0"
-  checksum: 10c0/16df25f582732b63edbb6ff5359efc2f441181bef242fadd0a386addb06f32bf991ac63c5939421c5870742fbb939229bc888533151789f47eb717e9dcbd510a
+"@unocss/reset@npm:^0.65.4":
+  version: 0.65.4
+  resolution: "@unocss/reset@npm:0.65.4"
+  checksum: 10c0/1bea0b399b5ec6792004b0c1bc34ad6c26b0352f6279b702add57374248dfb36f8530e2a2649d18d4c4ef28c3209ae56a1944b3160fdee9b71e8f1b5c8eaaecd
   languageName: node
   linkType: hard
 
@@ -2328,8 +2346,8 @@ __metadata:
     "@iconify-json/tabler": "npm:^1.2.13"
     "@iconify/utils": "npm:^2.2.1"
     "@types/node": "npm:^22.10.2"
-    "@unocss/preset-icons": "npm:^0.65.1"
-    "@unocss/reset": "npm:^65.4.0"
+    "@unocss/preset-icons": "npm:^0.65.4"
+    "@unocss/reset": "npm:^0.65.4"
     astro: "npm:5.1.1"
     pagefind: "npm:^1.2.0"
     solid-js: "npm:^1.9.3"
