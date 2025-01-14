@@ -5,7 +5,14 @@ import { Image } from 'astro:assets';
 <div class="flex items-center gap-1 h-14">
   {contributors.map(contributor => (
   <a href={contributor.github}>
-    <Image class="rounded-full hover:scale-125 ease-out duration-300" src={contributor.avatar} alt={contributor.name} width="48" height="48" />
+    <Image
+      class="rounded-full hover:scale-125 ease-out duration-300"
+      src={contributor.avatar}
+      alt={contributor.name}
+      width="48"
+      height="48"
+      loading="lazy"
+    />
   </a>
   ))}
 </div>
