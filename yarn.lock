@@ -2050,6 +2050,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@unocss/reset@npm:^65.4.0":
+  version: 65.4.0
+  resolution: "@unocss/reset@npm:65.4.0"
+  checksum: 10c0/16df25f582732b63edbb6ff5359efc2f441181bef242fadd0a386addb06f32bf991ac63c5939421c5870742fbb939229bc888533151789f47eb717e9dcbd510a
+  languageName: node
+  linkType: hard
+
 "@unocss/rule-utils@npm:0.65.1":
   version: 0.65.1
   resolution: "@unocss/rule-utils@npm:0.65.1"
@@ -2322,6 +2329,7 @@ __metadata:
     "@iconify/utils": "npm:^2.2.1"
     "@types/node": "npm:^22.10.2"
     "@unocss/preset-icons": "npm:^0.65.1"
+    "@unocss/reset": "npm:^65.4.0"
     astro: "npm:5.1.1"
     pagefind: "npm:^1.2.0"
     solid-js: "npm:^1.9.3"
