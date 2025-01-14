@@ -1,11 +1,12 @@
 import { For, Show } from "solid-js";
 import { MenuButton } from "./MenuButton";
 import { NavLink } from "./NavLink";
+import { menuOrder } from "./menuOrder";
 import { Modal } from "../Modal";
 import { isMenuOpen,toggleMenu  } from "../overlay";
 
 export default function Menu(){
-  const order = ["docs","download","github","privacy","terms"];
+  const order = menuOrder;
   return(
     <>
       <MenuButton/>

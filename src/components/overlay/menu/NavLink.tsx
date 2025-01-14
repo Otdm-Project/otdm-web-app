@@ -1,6 +1,6 @@
 import { createSignal, For, Match, Switch } from "solid-js";
 import { navLinks } from "@/data/navLinks";
-import { docsList } from "@/components/utils/docsList";
+import { docsList } from "@/components/utils/docs/docsList";
 
 export function NavLink(props: {id: string}) {
   const navItem = navLinks[props.id];

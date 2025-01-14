@@ -1,6 +1,6 @@
-import { docsOrders } from "@/data/docsOrders";
+import { docsOrder } from "./docsOrder";
 
-export interface DocDataType {
+interface DocDataType {
   url: string;
   file: string;
   frontmatter: {
@@ -9,8 +9,6 @@ export interface DocDataType {
 }
 
 export function docsList(): DocDataType[] {
-  //ドキュメントの表示順を定義
-  const order = docsOrders
   //ドキュメントのデータを取得
   const docs = Object.values(import.meta.glob<DocDataType>('@/pages/docs/*.md', {eager : true}));
   
@@ -22,7 +20,10 @@ export function docsList(): DocDataType[] {
     return fileName.replace('.md', '');
   };
   
+  //ドキュメントの表示順に従ってソート
   const getOrderIndex = (doc: DocDataType): number => {
+    //ドキュメントの表示順を取得
+    const order = docsOrder;
     try {
       const frontmatter = doc.frontmatter;
       const file = doc.file;
