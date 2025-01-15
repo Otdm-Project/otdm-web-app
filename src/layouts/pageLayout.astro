@@ -6,6 +6,7 @@ interface Props {
   frontmatter: {
     title: string;
     header: string;
+    updated: string;
   };
 }
 
@@ -13,7 +14,7 @@ const {frontmatter} = Astro.props;
 ---
 <Layout title={frontmatter.title}>
   <div class="flex gap-8 justify-center min-h-screen p-12">
-    <PageBox header={frontmatter.header}>
+    <PageBox header={frontmatter.header} updated={frontmatter.updated}>
       <slot />
     </PageBox>
   </div>
