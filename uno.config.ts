@@ -94,6 +94,9 @@ export default defineConfig({
         color: #f4f4f5;
         border-radius: 4px;
       }
+      li {
+        margin-top: 0.5em;
+      }
     `
   }],
   rules: [
