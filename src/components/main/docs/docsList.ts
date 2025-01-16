@@ -1,4 +1,4 @@
-import { docsOrder } from "./docsOrder";
+import { docsOrder } from "@/data/orders/docsOrder";
 
 interface DocDataType {
   url: string;
