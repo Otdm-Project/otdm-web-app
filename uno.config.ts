@@ -1,11 +1,13 @@
 import {
   defineConfig,
   presetUno,
+  presetIcons,
   presetTypography,
+  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup
 } from 'unocss'
-import { presetIcons } from 'unocss/preset-icons'
+import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local'
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 
 export default defineConfig({
@@ -34,7 +36,18 @@ export default defineConfig({
         "h6":{ "font-size": "0.75rem" },
         "pre":{ "padding": "16px" }
       }
-    })
+    }),
+    presetWebFonts({
+      provider: 'none',
+      fonts: {
+        ShipporiGC: 'ShipporiGochicSub'
+      },
+      processors: createLocalFontProcessor({
+        cacheDir: '/node_modules/.cache/unocss/fonts',
+        fontAssetsDir: '/public/fonts',
+        fontServeBaseUrl: '/fonts',
+      })
+    }),
   ],
   transformers: [
     transformerDirectives(),
@@ -81,6 +94,13 @@ export default defineConfig({
   },
   preflights: [{
     getCSS: () => `
+      @font-face {
+        font-family: 'ShipporiGochicSub';
+        src: url('/fonts/ShipporiGochicSub.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
       [id] {
         scroll-margin-top: 5rem;
       }
