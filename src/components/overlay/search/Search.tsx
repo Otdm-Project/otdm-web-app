@@ -10,7 +10,7 @@ export default function Search() {
         <SearchModal/>
       </Show>
       <button onClick={toggleSearch} class= "btn-base size-otdm-btn">
-        <div class="i-tabler:search size-1em"></div>
+        <div class="i-tabler:search size-otdm-icon"></div>
       </button>
     </search>
   )

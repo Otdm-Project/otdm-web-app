@@ -3,12 +3,12 @@ import { formatDateToJP } from '../utils/dateFormat';
 const { header, updated } = Astro.props;
 const updatedDate = formatDateToJP(updated);
 ---
-<div class="flex flex-col gap-2 box-main w-4xl p-8">
+<div class="box-main max-w-4xl">
   <div class="sm:(flex justify-between) pb-2 border-b">
     <h1 class="text-4xl font-500">{header}</h1>
     <p class="mt-4">最終更新日 : {updatedDate}</p>
   </div>
-  <div class="markdown">
+  <div class="markdown mt-8">
     <slot />
   </div>
 </div>
