@@ -9,7 +9,7 @@ export default function Search() {
       <Show when={isSearchOpen()}>
         <SearchModal/>
       </Show>
-      <button onClick={toggleSearch} class= "btn-base">
+      <button onClick={toggleSearch} class= "btn-base size-otdm-btn">
         <div class="i-tabler:search size-1em"></div>
       </button>
     </search>

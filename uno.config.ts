@@ -130,9 +130,12 @@ export default defineConfig({
       'box-link': 'text-docs-link hover:underline decoration-2 outline-cyan-600',
       'box-tooltip': 'inline-block absolute inset-tooltip bg-docs-primary text-(xs docs-text nowrap) border-(2 docs-secondary) p-2 rounded-md transition pointer-events-none',
     },
+    {
+      'size-otdm-btn': 'size-8 sm:size-12'
+    },
     [
     /^btn-(.+?)(-style)?$/, match => {
-      const base = 'grid place-content-center rounded-lg size-8 sm:size-12'
+      const base = 'grid place-content-center rounded-lg'
       const styles: { [key: string]: string } = {
           search: 'bg-cyan-500 hover:bg-cyan-600 sm:(text-slate-200 bg-blue-900 hover:bg-blue-950)',
           docs: 'text-orange-900 bg-orange-400 hover:bg-orange-500',
