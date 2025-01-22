@@ -1,5 +1,5 @@
 ---
-import ContributorCard from "./ContributorCard.astro";
+import MemberCard from "./MemberCard.astro";
 import { navLinks } from "@/data/navLinks";
 
 const terms = navLinks.terms;
@@ -11,7 +11,7 @@ const members = navLinks.members;
   <a class="hover:underline" href={privacy.href}>{privacy.name}</a>
   <div class="flex flex-col items-center gap-2">
     <a class="hover:underline" href={members.href}>{members.name}</a>
-    <ContributorCard />
+    <MemberCard />
   </div>
   <small>© 2024 Otdm Project</small>
 </footer>
