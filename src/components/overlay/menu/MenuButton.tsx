@@ -2,7 +2,7 @@ import { toggleMenu, isMenuOpen, isClosing } from "../overlay";
 
 export function MenuButton() {
   return (
-    <button class="relative btn-menu size-otdm-btn" onClick={toggleMenu}>
+    <button class="relative btn-menu size-otdm-btn overflow-hidden" onClick={toggleMenu}>
       <div class={`absolute inset-0 m-auto  grid place-content-center property-all duration-300 ease-in-out ${
         isMenuOpen() && !isClosing() ? '-translate-x-full opacity-0 invisible' : 'translate-x-0'
         }`}>
