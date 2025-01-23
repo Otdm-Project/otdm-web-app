@@ -16,7 +16,7 @@ const {frontmatter} = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <div class="flex gap-8 justify-center min-h-screen my-8 p-4 sm:(my-16)">
+  <div class="flex gap-8 my-8 px-4 sm:(my-16)">
     <DocsNav />
     <DocsBox header={frontmatter.header} author={frontmatter.author} authorLink={frontmatter.authorLink}>
       <slot />
