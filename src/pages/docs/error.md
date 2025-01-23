@@ -1,7 +1,7 @@
 ---
 layout: "@/layouts/docsLayout.astro"
 title: "エラー | おてだま"
-header: "エラー一覧"
+header: "エラー"
 author: "Yayuki-Kazuha"
 authorLink: "https://github.com/Yayuki-Kazuha"
 ---
