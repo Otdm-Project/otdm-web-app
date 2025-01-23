@@ -126,13 +126,14 @@ export default defineConfig({
   ],
   shortcuts: [
     {
-      'box-main': 'flex flex-col gap-2 w-2xl bg-docs-primary border-(2 docs-secondary) rounded-lg p-6 sm:p-12',
+      'box-main': 'flex flex-col gap-2 bg-docs-primary border-(2 docs-secondary) rounded-lg p-6 sm:p-12',
       'box-link': 'text-docs-link hover:underline decoration-2 outline-cyan-600',
       'box-tooltip': 'inline-block absolute inset-tooltip bg-docs-primary text-(xs docs-text nowrap) border-(2 docs-secondary) p-2 rounded-md transition pointer-events-none',
     },
     {
       'size-otdm-btn': 'size-8 sm:size-12',
-      'size-otdm-icon': 'size-0.75em sm:size-1em'
+      'size-otdm-icon': 'size-0.75em sm:size-1em',
+      'min-h-main' : 'min-h-[calc(100dvh-56px)] sm:min-h-[calc(100dvh-80px)]',
     },
     [
     /^btn-(.+?)(-style)?$/, match => {
