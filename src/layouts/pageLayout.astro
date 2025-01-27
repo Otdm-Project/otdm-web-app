@@ -13,7 +13,7 @@ interface Props {
 const {frontmatter} = Astro.props;
 ---
 <Layout title={frontmatter.title}>
-  <div class="my-8 px-4 sm:(px-8 my-16)">
+  <div class="mp-otdm">
     <PageBox header={frontmatter.header} updated={frontmatter.updated}>
       <slot />
     </PageBox>
