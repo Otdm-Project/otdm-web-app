@@ -13,7 +13,7 @@ Linuxパッケージでは、root権限（もしくはsudoコマンドの使用�
 このコマンドによりおてだまのサーバ群と通信が行われ、webサーバを公開できるようにします。
 
 ```shell
-otdm up
+./otdm up
 ```
 
 ## トンネルを切断
@@ -21,13 +21,21 @@ otdm up
 このコマンドにより、既存のトンネルを停止し、サーバ公開を終了します。
 
 ```shell
-otdm down
+./otdm down
+```
+
+## 強制終了(windowsのみ)
+
+処理が終わらないなどが発生したときにご利用ください。
+
+```shell
+./otdm down -f
 ```
 
 ## 接続情報の表示
 
 ```shell
-otdm status
+./otdm status
 ```
 
 このコマンドにより、接続に利用している情報を確認することができます。確認できる内容には、それぞれの公開鍵や割り当てられたサブドメインなどがあります。
@@ -35,17 +43,13 @@ otdm status
 ## バージョンの確認
 
 ```shell
-otdm version
+./otdm version
 ```
 
 ## ヘルプ
 
 ```shell
-otdm
-```
-
-```shell
-otdm help
+./otdm help
 ```
 
 各種コマンドについて、説明を表示します。
