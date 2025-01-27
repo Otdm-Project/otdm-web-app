@@ -2,8 +2,8 @@
 layout: "@/layouts/docsLayout.astro"
 title: "セットアップ | おてだま"
 header: "セットアップ"
-author: "Haru"
-authorLink: "https://github.com/haru-0001"
+author: "ODENKITUNE"
+authorLink: "https://github.com/ODENKITUNE"
 ---
 
 ## windows cmd版
