@@ -5,18 +5,22 @@ import Layout from '@/layouts/layout.astro';
 ---
 
 <Layout title="おてだま | お手軽Web公開サービス">
-  <section class="relative">
-    <div class="flex flex-col justify-center items-center gap-4 max-w-sm mt-16 mx-auto px-8 sm:(max-w-screen-md mt-24)">
+  <section class="content-center">
+    <div class="flex flex-col justify-center items-center gap-6 p-8">
       <Image
       src={otdmIcon}
       alt="アイコン"
-      class="size-32 sm:size-48 my-8"
+      class="size-64 min-w-48 min-h-48 mx-a my-8"
       loading="lazy"
       />
-      <h1 class="text-4xl sm:text-5xl font-ShipporiGC">おてだま</h1>
-      <p class="text-2xl sm:text-3xl">ぱぱっとWebに公開したくない？</p>
-      <p class="text-2xl sm:text-3xl">おてだまを使ってWebに公開する手間を減らしましょう</p>
-      <a href="./docs/quick-start" class="mt-4 px-6 py-3 rounded-lg text-(lg otdm-text) bg-red-500 hover:bg-red-600 sm:text-xl ">
+      <h1 class="text-5xl font-ShipporiGC">おてだま</h1>
+      <p class="text-3xl text-center [word-break:keep-all] [overflow-wrap:anywhere]" >
+        ぱぱっとWebに<wbr>公開したくない？
+      </p>
+      <p class="text-3xl text-center [word-break:keep-all] [overflow-wrap:anywhere]">
+        おてだまを使って<wbr>Webに公開する<wbr>手間を減らしましょう
+      </p>
+      <a href="./docs/quick-start" class="mt-4 mx-a px-6 py-3 rounded-lg text-(lg otdm-text) bg-red-500 hover:bg-red-600 sm:text-xl ">
         はじめる
       </a>
     </div>
