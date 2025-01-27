@@ -1,7 +1,7 @@
 import { For, Show } from "solid-js";
 import { MenuButton } from "./MenuButton";
 import { NavLink } from "./NavLink";
-import { menuOrder } from "./menuOrder";
+import { menuOrder } from "@/data/orders/menuOrder";
 import { Modal } from "../Modal";
 import { isMenuOpen,toggleMenu  } from "../overlay";
 

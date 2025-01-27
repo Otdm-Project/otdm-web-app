@@ -1,10 +1,10 @@
-interface ContributorType {
+interface MembersType {
   name: string;
   avatar: string;
   github: string;
 }
 
-export const contributors: ContributorType[] = [
+export const members: MembersType[] = [
   {
     name: 'ODENKITUNE',
     github: 'https://github.com/ODENKITUNE',

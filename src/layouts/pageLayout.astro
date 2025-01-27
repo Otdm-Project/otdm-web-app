@@ -1,19 +1,20 @@
 ---
-import PageBox from '@/components/main/PageBox.astro';
+import PageBox from '@/components/main/pages/PageBox.astro';
 import Layout from './layout.astro';
 
 interface Props {
   frontmatter: {
     title: string;
     header: string;
+    updated: string;
   };
 }
 
 const {frontmatter} = Astro.props;
 ---
 <Layout title={frontmatter.title}>
-  <div class="flex gap-8 justify-center min-h-screen p-12">
-    <PageBox header={frontmatter.header}>
+  <div class="mp-otdm">
+    <PageBox header={frontmatter.header} updated={frontmatter.updated}>
       <slot />
     </PageBox>
   </div>

@@ -1,11 +1,13 @@
 import {
   defineConfig,
   presetUno,
+  presetIcons,
   presetTypography,
+  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup
 } from 'unocss'
-import { presetIcons } from 'unocss/preset-icons'
+import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local'
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 
 export default defineConfig({
@@ -26,15 +28,40 @@ export default defineConfig({
     presetTypography({
       selectorName: "markdown",
       cssExtend: {
-        "h1":{ "font-size": "2rem" },
-        "h2":{ "font-size": "1.5rem"},
-        "h3":{ "font-size": "1.25rem" },
-        "h4":{ "font-size": "1rem" },
-        "h5":{ "font-size": "0.875rem" },
-        "h6":{ "font-size": "0.75rem" },
-        "pre":{ "padding": "16px" }
+        "h1":{
+          "font-size": "2rem"
+        },
+        "h2":{
+          "font-size": "1.5rem"
+        },
+        "h3":{
+          "font-size": "1.25rem"
+        },
+        "h4":{
+          "font-size": "1rem"
+        },
+        "h5":{
+          "font-size": "0.875rem"
+        },
+        "h6":{
+          "font-size": "0.75rem"
+        },
+        "pre":{
+          "padding": "16px"
+        },
       }
-    })
+    }),
+    presetWebFonts({
+      provider: 'none',
+      fonts: {
+        ShipporiGC: 'ShipporiGochicSub'
+      },
+      processors: createLocalFontProcessor({
+        cacheDir: '/node_modules/.cache/unocss/fonts',
+        fontAssetsDir: '/public/fonts',
+        fontServeBaseUrl: '/fonts',
+      })
+    }),
   ],
   transformers: [
     transformerDirectives(),
@@ -81,6 +108,13 @@ export default defineConfig({
   },
   preflights: [{
     getCSS: () => `
+      @font-face {
+        font-family: 'ShipporiGochicSub';
+        src: url('/fonts/ShipporiGochicSub.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
       [id] {
         scroll-margin-top: 5rem;
       }
@@ -94,6 +128,9 @@ export default defineConfig({
         color: #f4f4f5;
         border-radius: 4px;
       }
+      li {
+        margin-top: 0.5em;
+      }
     `
   }],
   rules: [
@@ -103,13 +140,19 @@ export default defineConfig({
   ],
   shortcuts: [
     {
-      'box-main': 'bg-docs-primary border-(2 docs-secondary)',
+      'box-main': 'flex flex-col gap-2 bg-docs-primary border-(2 docs-secondary) rounded-lg p-6 sm:p-12',
       'box-link': 'text-docs-link hover:underline decoration-2 outline-cyan-600',
       'box-tooltip': 'inline-block absolute inset-tooltip bg-docs-primary text-(xs docs-text nowrap) border-(2 docs-secondary) p-2 rounded-md transition pointer-events-none',
     },
+    {
+      'size-otdm-btn': 'size-8 sm:size-12',
+      'size-otdm-icon': 'size-0.75em sm:size-1em',
+      'min-h-main' : 'min-h-[calc(100dvh-56px)] sm:min-h-[calc(100dvh-80px)]',
+      'mp-otdm': 'my-4 p-4 sm:(my-8 p-8)',
+    },
     [
     /^btn-(.+?)(-style)?$/, match => {
-      const base = 'grid place-content-center rounded-lg size-8 sm:size-12'
+      const base = 'grid place-content-center rounded-lg'
       const styles: { [key: string]: string } = {
           search: 'bg-cyan-500 hover:bg-cyan-600 sm:(text-slate-200 bg-blue-900 hover:bg-blue-950)',
           docs: 'text-orange-900 bg-orange-400 hover:bg-orange-500',

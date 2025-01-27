@@ -30,8 +30,8 @@ const props = data[id];
 ---
 
 <div class="hidden sm:block relative group">
-  <a class={props.style} href={props.href} {...props.blank && {target: "_blank", rel: "noopener"}}>
-    <div class={`${props.icon} size-1em`}></div>
+  <a class=`${props.style} size-otdm-btn` href={props.href} {...props.blank && {target: "_blank", rel: "noopener"}}>
+    <div class={`${props.icon} size-otdm-icon`}></div>
     <span class="box-tooltip opacity-0 group-hover:opacity-100">
       {props.name}
     </span>
