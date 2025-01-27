@@ -16,7 +16,7 @@ const pagefindIgnore = frontmatter.pagefindIgnore ?? false;
 <Layout title={frontmatter.title}>
   <div
     class="mp-otdm"
-    {...pagefindIgnore ? { "data-pagefind-ignore": "" } : {}}
+    {...(pagefindIgnore && { "data-pagefind-ignore": "" })}
     >
     <PageBox header={frontmatter.header} updated={frontmatter.updated}>
       <slot />
