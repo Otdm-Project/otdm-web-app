@@ -28,13 +28,27 @@ export default defineConfig({
     presetTypography({
       selectorName: "markdown",
       cssExtend: {
-        "h1":{ "font-size": "2rem" },
-        "h2":{ "font-size": "1.5rem"},
-        "h3":{ "font-size": "1.25rem" },
-        "h4":{ "font-size": "1rem" },
-        "h5":{ "font-size": "0.875rem" },
-        "h6":{ "font-size": "0.75rem" },
-        "pre":{ "padding": "16px" }
+        "h1":{
+          "font-size": "2rem"
+        },
+        "h2":{
+          "font-size": "1.5rem"
+        },
+        "h3":{
+          "font-size": "1.25rem"
+        },
+        "h4":{
+          "font-size": "1rem"
+        },
+        "h5":{
+          "font-size": "0.875rem"
+        },
+        "h6":{
+          "font-size": "0.75rem"
+        },
+        "pre":{
+          "padding": "16px"
+        },
       }
     }),
     presetWebFonts({
