@@ -6,8 +6,6 @@ author: "Haru"
 authorLink: "https://github.com/haru-0001"
 ---
 
-セットアップの内容
-
 ## windows cmd版
 
 ### wireguardインストール
@@ -43,3 +41,5 @@ authorLink: "https://github.com/haru-0001"
   ```bash
   ./otdm.exe down -f
   ```
+  
+## linux cmd版
