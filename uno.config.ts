@@ -57,7 +57,6 @@ export default defineConfig({
         ShipporiGC: 'ShipporiGochicSub'
       },
       processors: createLocalFontProcessor({
-        cacheDir: '/node_modules/.cache/unocss/fonts',
         fontAssetsDir: '/public/fonts',
         fontServeBaseUrl: '/fonts',
       })
