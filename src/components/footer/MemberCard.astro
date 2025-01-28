@@ -6,7 +6,7 @@ import { Image } from 'astro:assets';
   {members.map(members => (
   <a href={members.github}>
     <Image
-      class="rounded-full hover:scale-125 ease-out duration-300"
+      class="rounded-full hover:scale-125 ease-out duration-300 shadow-md"
       src={members.avatar}
       alt={members.name}
       width="48"

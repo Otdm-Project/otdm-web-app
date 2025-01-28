@@ -5,7 +5,7 @@ import { isSearchOpen, toggleSearch } from "../overlay";
 
 export default function Search() {
   return (
-    <search class={`flex items-center btn-search-style rounded-lg ${isSearchOpen() && "outline-(3 solid)"}`} >
+    <search class={`flex items-center btn-search-style shadow-md rounded-lg ${isSearchOpen() && "outline-(3 solid)"}`} >
       <Show when={isSearchOpen()}>
         <SearchModal/>
       </Show>
