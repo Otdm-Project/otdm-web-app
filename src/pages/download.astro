@@ -1,6 +1,36 @@
 ---
+import { Image } from 'astro:assets';
+import otdmIcon from '@/assets/icon/otdm-icon.svg';
 import Layout from '@/layouts/layout.astro';
 ---
 
 <Layout title="ダウンロード | おてだま">
+    <div class="flex flex-col items-center gap-4 w-full mp-otdm sm:gap-6">
+      <Image
+      src={otdmIcon}
+      alt="アイコン"
+      class="size-64 min-w-48 min-h-48 py-4 sm:py-8"
+      />
+      <h1 class="text-5xl font-500">ダウンロード</h1>
+      <div class="flex justify-between gap-2 max-w-2xl w-full mt-16 mx-4">
+        <a
+          href="https://github.com/Otdm-Project/otdm-win-app/releases"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center gap-2 w-72 font-500 p-2 rounded-lg text-(otdm-text center) shadow-lg bg-cyan-800 hover:bg-cyan-900 sm:(text-xl px-6 py-3)"
+          >
+          <div class="i-tabler:brand-windows size-12 self-center"></div>
+          <p>windows版<br/>CUIアプリ<span class="hidden sm:inline">ケーション</span>を<br/>ダウンロード</p>
+        </a>
+        <a
+          href="https://github.com/Otdm-Project/otdm-linux-app/releases"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center gap-2 w-72 font-500 p-2 rounded-lg text-(otdm-text center) shadow-lg bg-cyan-800 hover:bg-cyan-900 sm:(text-xl px-6 py-3)"
+          >
+          <div class="i-tabler:brand-ubuntu size-12 self-center"></div>
+          <p>linux版<br/>CUIアプリ<span class="hidden sm:inline">ケーション</span>を<br/>ダウンロード</p>
+        </a>
+      </div>
+    </div>
 </Layout>
