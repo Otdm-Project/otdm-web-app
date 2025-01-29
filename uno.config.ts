@@ -127,7 +127,7 @@ export default defineConfig({
         color: #f4f4f5;
         border-radius: 4px;
       }
-      li {
+      li, ol{
         margin-top: 0.5em;
       }
     `
