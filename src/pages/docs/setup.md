@@ -10,33 +10,33 @@ authorLink: "https://github.com/ODENKITUNE"
 
 ### wireguardインストール
 
-- 以下のページにアクセスしwireguardのインストーラーをダウンロード
+1. 以下のページにアクセスしwireguardのインストーラーをダウンロード
   <https://www.wireguard.com/install/>
 
-- インストーラを実行する
+2. インストーラを実行する
 
 ### otdm windows CUI版のインストール
 
-- 以下のページにアクセスし最新版のotdm-win-app.zipをダウンロードし解凍する
+1. 以下のページにアクセスし最新版のotdm-win-app.zipをダウンロードし解凍する
   <https://github.com/Otdm-Project/otdm-win-app/releases>
 
-- コマンドプロンプトかPowerShellで解凍ファイル内に移動する
+2. コマンドプロンプトかPowerShellで解凍ファイル内に移動する
 
-  ```bash
-  cd path/to/otdm-win-app
-  ```
+    ```bash
+    cd path/to/otdm-win-app
+    ```
 
-- 起動コマンドを打つ
+3. 起動コマンドを打つ
 
-  ```bash
-  ./otdm.exe up
-  ```
+    ```bash
+    ./otdm.exe up
+    ```
 
 - 終了は下のコマンドで行う
 
-  ```bash
-  ./otdm.exe down
-  ```
+    ```bash
+    ./otdm.exe down
+    ```
 
 - 何かしらの理由で強制終了したい場合は以下のコマンドで行う
 
@@ -63,10 +63,10 @@ GitHubのリリースページから最新のバージョンをダウンロー�
 2. 必要なバイナリをダウンロードします（例: "app-cui-linux-amd64"）。
 3. ダウンロードしたバイナリに実行権限を付与します。
 
-```bash
-chmod +x app-cui-linux-amd64
-sudo mv app-cui-linux-amd64 /usr/local/bin/app
-```
+    ```bash
+    chmod +x app-cui-linux-amd64
+    sudo mv app-cui-linux-amd64 /usr/local/bin/app
+    ```
 
 ## linux GUI
 
@@ -83,10 +83,10 @@ GitHubリリースページからGUI版のアプリケーションをダウン�
 2. 必要なGUIバージョンをダウンロードします（例: "app-gui-linux-amd64.deb"）。
 3. ダウンロードした ".deb" ファイルをインストールします。
 
-```bash
-sudo dpkg -i app-gui-linux-amd64.deb
-sudo apt-get install -f
-```
+    ```bash
+    sudo dpkg -i app-gui-linux-amd64.deb
+    sudo apt-get install -f
+    ```
 
 ### 注意事項
 
