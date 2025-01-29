@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import otdmIcon from '@/assets/otdm-icon.svg';
+import otdmIcon from '@/assets/icon/otdm-icon.svg';
 import Layout from '@/layouts/layout.astro';
 ---
 
@@ -11,16 +11,15 @@ import Layout from '@/layouts/layout.astro';
       src={otdmIcon}
       alt="アイコン"
       class="size-64 min-w-48 min-h-48 py-4 sm:py-8"
-      loading="lazy"
       />
-      <h1 class="text-5xl font-ShipporiGC">おてだま</h1>
-      <p class="text-2xl sm:text-3xl text-center [word-break:keep-all] [overflow-wrap:anywhere]" >
+      <h1 class="font-ShipporiGC text-5xl">おてだま</h1>
+      <p class="font-500 text-2xl sm:text-3xl text-center [word-break:keep-all] [overflow-wrap:anywhere]" >
         ぱぱっとWebに<wbr>公開したくない？
       </p>
-      <p class="text-2xl sm:text-3xl text-center [word-break:keep-all] [overflow-wrap:anywhere]">
+      <p class="font-500 text-2xl sm:text-3xl text-center [word-break:keep-all] [overflow-wrap:anywhere]">
         おてだまを使って<wbr>Webに公開する<wbr>手間を減らしましょう
       </p>
-      <a href="./docs/quick-start" class="mt-4 mx-a px-6 py-3 rounded-lg text-(lg otdm-text) bg-red-500 hover:bg-red-600 sm:text-xl ">
+      <a href="./docs/setup" class="font-500 mt-4 mx-a px-6 py-3 rounded-lg text-(lg otdm-text) shadow-lg bg-red-500 hover:bg-red-600 sm:text-xl ">
         はじめる
       </a>
     </div>

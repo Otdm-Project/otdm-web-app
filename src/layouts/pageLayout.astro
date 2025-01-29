@@ -7,13 +7,17 @@ interface Props {
     title: string;
     header: string;
     updated: string;
+    pagefindIgnore?: boolean;
   };
 }
-
 const {frontmatter} = Astro.props;
+const pagefindIgnore = frontmatter.pagefindIgnore ?? false;
 ---
 <Layout title={frontmatter.title}>
-  <div class="mp-otdm">
+  <div
+    class="mp-otdm"
+    {...(pagefindIgnore && { "data-pagefind-ignore": "" })}
+    >
     <PageBox header={frontmatter.header} updated={frontmatter.updated}>
       <slot />
     </PageBox>

@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import otdmIcon from '../../assets/otdm-icon.svg';
+import otdmIcon from '@/assets/icon/otdm-icon.svg';
 import OtdmButton from "./OtdmButton.astro";
 import Search from "../overlay/search/Search"
 import Menu from "../overlay/menu/Menu";
@@ -13,7 +13,6 @@ import Menu from "../overlay/menu/Menu";
         src={otdmIcon}
         alt="アイコン"
         class="size-7 sm:(size-8)"
-        loading="lazy"
       />
       <span class="text-xl sm:text-2xl text-nowrap font-ShipporiGC">おてだま</span>
     </a>
