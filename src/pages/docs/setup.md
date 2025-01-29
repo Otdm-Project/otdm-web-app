@@ -59,7 +59,8 @@ UbuntuなどのDebian系ディストリビューションでの、aptを用い�
 
 GitHubのリリースページから最新のバージョンをダウンロードしてインストールすることも可能です。
 
-1. [GitHubリリースページ](https://github.com/example/project/releases)にアクセスします。
+1. 以下のページにアクセスします。  
+  <https://github.com/Otdm-Project/otdm-linux-app/releases>
 2. 必要なバイナリをダウンロードします（例: "app-cui-linux-amd64"）。
 3. ダウンロードしたバイナリに実行権限を付与します。
 
@@ -79,7 +80,8 @@ CUI版と同様にUbuntuなどのDebian系ディストリビューションで�
 
 GitHubリリースページからGUI版のアプリケーションをダウンロードしてインストールできます。
 
-1. [GitHubリリースページ](https://github.com/example/project/releases)にアクセスします。
+1. 以下のページにアクセスします。  
+   <https://github.com/Otdm-Project/otdm-Gui/releases>
 2. 必要なGUIバージョンをダウンロードします（例: "app-gui-linux-amd64.deb"）。
 3. ダウンロードした ".deb" ファイルをインストールします。
 
@@ -91,4 +93,5 @@ GitHubリリースページからGUI版のアプリケーションをダウン�
 ### 注意事項
 
 - aptでインストールする場合、自動的にインストールされます。
-- 最新情報やサポートについては、[公式Webページ](https://example.com)をご覧ください。
+- ご意見やご要望、バグの報告に関しましては以下のページからご連絡頂けると幸いです。
+  <https://github.com/orgs/Otdm-Project/discussions>
