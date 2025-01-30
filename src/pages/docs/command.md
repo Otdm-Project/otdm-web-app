@@ -2,7 +2,7 @@
 layout: "@/layouts/docsLayout.astro"
 title: "コマンド | おてだま"
 header: "コマンド"
-author: "Yayuki-Kazuha"
+author: "Yayuki Kazuha"
 authorLink: "https://github.com/Yayuki-Kazuha"
 ---
 
