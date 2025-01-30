@@ -38,8 +38,8 @@ export const members: MembersType[] = [
     bio: 'ネットワークに興味が出てきた',
   },
   {
-    name: 'Run',
-    github: 'https://github.com/Run51027 ',
+    name: 'Moom',
+    github: 'https://github.com/Moom51027 ',
     avatar: 'https://avatars.githubusercontent.com/u/168060328',
     headerImage: ume,
     role: 'Windowsアプリケーションの開発',
