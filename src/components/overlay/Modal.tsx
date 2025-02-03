@@ -22,7 +22,7 @@ export function Modal (props: {
       />
       <div
         id="modal-results"
-        class={`z-6 fixed top-14 p-5 overscroll-contain overflow-y-scroll bg-docs-primary
+        class={`z-6 fixed top-14 p-5 overscroll-contain overflow-y-auto bg-docs-primary
           ${props.sideBar
             ? `${sideBarStyle} ${
               isMenuOpen() && !isClosing()

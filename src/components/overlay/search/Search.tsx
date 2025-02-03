@@ -1,6 +1,8 @@
 import { Show } from 'solid-js';
 import { SearchModal } from "./SearchModal";
-import { isSearchOpen, toggleSearch } from "../overlay";
+import { SearchButton } from './SearchButton';
+import { isSearchOpen } from "../overlay";
+
 
 
 export default function Search() {
@@ -9,9 +11,7 @@ export default function Search() {
       <Show when={isSearchOpen()}>
         <SearchModal/>
       </Show>
-      <button onClick={toggleSearch} class= "btn-base size-otdm-btn">
-        <div class="i-tabler:search size-otdm-icon"></div>
-      </button>
+      <SearchButton/>
     </search>
   )
 }
