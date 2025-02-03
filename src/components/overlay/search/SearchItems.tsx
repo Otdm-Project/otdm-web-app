@@ -24,7 +24,7 @@ export const SearchItems = (props: {
   return (
     <Show when={data()}>
       {(resultData) => (
-        <div class="p-2 my-4 border-(zinc-300 b-2)">
+        <div class="pb-4 mb-4 border-(zinc-300 b-2)">
           <a
             href={resultData().sub_results[0].url.replace('/dist', '')}
             onClick={toggleSearch}

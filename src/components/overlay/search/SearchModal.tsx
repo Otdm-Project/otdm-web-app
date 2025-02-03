@@ -57,9 +57,11 @@ export function SearchModal() {
           handleSearch();
         }}
       />
-      <Modal toggleOpen={toggleSearch}>
+      <Modal
+        toggleOpen={toggleSearch}
+        headerItem={<h2>検索結果 {results().length}件</h2>}
+        >
         <div class="text-docs-head">
-          <h2>検索結果 {results().length}件</h2>
           <For each={results()}>
             {(result) => <SearchItems key={result.id} result={result} />}
           </For>
