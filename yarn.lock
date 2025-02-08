@@ -1920,24 +1920,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"app@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "app@workspace:."
-  dependencies:
-    "@astrojs/check": "npm:0.9.4"
-    "@astrojs/solid-js": "npm:5.0.4"
-    "@iconify-json/tabler": "npm:^1.2.15"
-    "@iconify/utils": "npm:^2.2.1"
-    "@unocss/preset-icons": "npm:^65.4.3"
-    "@unocss/reset": "npm:^65.4.3"
-    astro: "npm:5.1.9"
-    pagefind: "npm:^1.2.0"
-    solid-js: "npm:^1.9.4"
-    typescript: "npm:^5.7.3"
-    unocss: "npm:^65.4.3"
-  languageName: unknown
-  linkType: soft
-
 "argparse@npm:^1.0.7":
   version: 1.0.10
   resolution: "argparse@npm:1.0.10"
@@ -4462,6 +4444,24 @@ __metadata:
   checksum: 10c0/57ad95f3e9a50be75e7d54e582d8d4da4003f983fd04d99ccc9d17d2dc04e30ea64126782f2e758566bcef2c4c55db0d6a3d344f35ca179dd92ea5ca92fc0313
   languageName: node
   linkType: hard
+
+"otdm-web-app@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "otdm-web-app@workspace:."
+  dependencies:
+    "@astrojs/check": "npm:0.9.4"
+    "@astrojs/solid-js": "npm:5.0.4"
+    "@iconify-json/tabler": "npm:^1.2.15"
+    "@iconify/utils": "npm:^2.2.1"
+    "@unocss/preset-icons": "npm:^65.4.3"
+    "@unocss/reset": "npm:^65.4.3"
+    astro: "npm:5.1.9"
+    pagefind: "npm:^1.2.0"
+    solid-js: "npm:^1.9.4"
+    typescript: "npm:^5.7.3"
+    unocss: "npm:^65.4.3"
+  languageName: unknown
+  linkType: soft
 
 "p-limit@npm:^2.2.0":
   version: 2.3.0
