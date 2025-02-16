@@ -8,7 +8,7 @@ export function Modal (props: {
   headerItem?: any;
 }) {
   const sideBarStyle = `right-0 w-80% max-w-100 h-[calc(100%-3.5rem)] border-(l-8 otdm-secondary) md:w-100 sm:(top-20)`;
-  const modalStyle = `w-full h-70vh m-auto border-(b-8 otdm-secondary) sm:(top-30 inset-x-0 w-80% max-w-220 h-80vh border-8 rounded-xl)`;
+  const modalStyle = `w-full h-60svh m-auto border-(b-8 otdm-secondary) sm:(top-30 inset-x-0 w-80% max-w-220 h-80svh border-8 rounded-xl)`;
   
   return (
     <Portal>
