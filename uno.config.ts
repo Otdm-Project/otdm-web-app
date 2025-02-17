@@ -147,7 +147,7 @@ export default defineConfig({
       'size-otdm-btn': 'size-8 sm:size-12',
       'size-otdm-icon': 'size-0.75em sm:size-1em',
       'min-h-main' : 'min-h-[calc(100svh-56px)] sm:min-h-[calc(100svh-80px)]',
-      'mp-otdm': 'my-8 px-4 sm:(my-16 px-8)',
+      'mp-otdm': 'my-12 px-4 sm:(my-16 px-8)',
     },
     [
     /^btn-(.+?)(-style)?$/, match => {
