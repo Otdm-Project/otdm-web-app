@@ -12,7 +12,7 @@ interface Props {
   };
 }
 
-const {frontmatter} = Astro.props;
+const {frontmatter}: Props = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
