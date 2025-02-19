@@ -34,7 +34,9 @@ import { Image } from 'astro:assets';
               <Badge color="cyan">{members.role}</Badge>
             </div>
             <div class="flex flex-col gap-4">
-              <a href={members.github} class="text-xl font-500 hover:underline">{members.name}</a>
+              <div>
+                <a href={members.github} class="text-xl font-500 hover:underline">{members.name}</a>
+              </div>
               <p>{members.bio}</p>
             </div>
           </div>
