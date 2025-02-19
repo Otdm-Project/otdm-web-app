@@ -1,0 +1,20 @@
+---
+import { formatDateToJP } from '@/utils/dateFormat';
+
+interface Props {
+  header: string;
+  updated: string;
+}
+
+const props: Props = Astro.props;
+const updatedDate = formatDateToJP(props.updated);
+---
+<div class="box-main max-w-2xl h-full">
+  <div class="sm:(flex justify-between) pb-2 border-b">
+    <h1 class="text-4xl font-500">{props.header}</h1>
+    <p class="mt-4">最終更新日 : {updatedDate}</p>
+  </div>
+  <div class="markdown mt-8">
+    <slot />
+  </div>
+</div>

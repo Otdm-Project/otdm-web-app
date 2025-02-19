@@ -1,7 +1,7 @@
 ---
 import Layout from "./layout.astro";
-import DocsBox from "@/components/main/docs/DocsBox.astro";
-import DocsNav from "@/components/main/docs/DocsNav.astro";
+import DocsBox from "@/components/contents/docs/DocsBox.astro";
+import DocsNav from "@/components/contents/docs/DocsNav.astro";
 
 interface Props {
   frontmatter: {
@@ -12,7 +12,7 @@ interface Props {
   };
 }
 
-const {frontmatter} = Astro.props;
+const {frontmatter}: Props = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>

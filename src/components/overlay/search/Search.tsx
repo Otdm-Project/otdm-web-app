@@ -1,17 +1,15 @@
 import { Show } from 'solid-js';
 import { SearchModal } from "./SearchModal";
-import { isSearchOpen, toggleSearch } from "../overlay";
-
+import { SearchButton } from './SearchButton';
+import { isSearchOpen } from "../overlay";
 
 export default function Search() {
   return (
-    <search class={`flex items-center btn-search-style sm:shadow-md rounded-lg ${isSearchOpen() && "outline-(3 solid)"}`} >
+    <search class={`flex items-center btn-search-style sm:shadow-md rounded-lg [&>input]:btn-search-style ${isSearchOpen() && "outline-(3 solid)"}`} >
       <Show when={isSearchOpen()}>
         <SearchModal/>
       </Show>
-      <button onClick={toggleSearch} class= "btn-base size-otdm-btn">
-        <div class="i-tabler:search size-otdm-icon"></div>
-      </button>
+      <SearchButton/>
     </search>
   )
 }

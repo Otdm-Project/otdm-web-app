@@ -1,0 +1,18 @@
+---
+interface Props {
+  header: string;
+  author: string;
+  authorLink: string;
+}
+
+const props: Props = Astro.props;
+---
+<div class="box-main w-full max-w-2xl">
+  <div class="sm:(flex justify-between) pb-2 border-b">
+    <h1 class="text-4xl font-500">{props.header}</h1>
+    <p class="mt-4 px-2" >著者:<a class="box-link" href={props.authorLink}>{props.author}</a></p>
+  </div>
+  <div class="markdown">
+    <slot />
+  </div>
+</div>

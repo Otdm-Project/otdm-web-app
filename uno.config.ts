@@ -47,7 +47,7 @@ export default defineConfig({
           "font-size": "0.75rem"
         },
         "pre":{
-          "padding": "16px"
+          "padding": "1rem"
         },
       }
     }),
@@ -118,17 +118,17 @@ export default defineConfig({
         scroll-margin-top: 5rem;
       }
       *:focus-visible {
-        outline: 3px solid #164e63;
-        border-radius: 2px;
+        outline: 0.1875rem solid #164e63;
+        border-radius: 0.125rem;
       }
       mark {
         padding: 0 0.25em;
         background-color: #164e63;
         color: #f4f4f5;
-        border-radius: 4px;
+        border-radius: 0.25rem;
       }
       li, ol{
-        margin-top: 0.5em;
+        margin-top: 0.5rem;
       }
     `
   }],
@@ -146,8 +146,8 @@ export default defineConfig({
     {
       'size-otdm-btn': 'size-8 sm:size-12',
       'size-otdm-icon': 'size-0.75em sm:size-1em',
-      'min-h-main' : 'min-h-[calc(100dvh-56px)] sm:min-h-[calc(100dvh-80px)]',
-      'mp-otdm': 'my-8 px-4 sm:(my-16 px-8)',
+      'min-h-main' : 'min-h-[calc(100svh-3.5rem)] sm:min-h-[calc(100svh-5rem)]',
+      'mp-otdm': 'my-12 px-4 sm:(my-16 px-8)',
     },
     [
     /^btn-(.+?)(-style)?$/, match => {

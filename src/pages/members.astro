@@ -1,23 +1,25 @@
 ---
 import Layout from '@/layouts/layout.astro';
+import  Badge  from '@/components/elements/Badge.astro';
 import { members } from '@/data/members';
 import { Image } from 'astro:assets';
-
 ---
 
-<Layout title="メンバー | おてだま">
+<Layout title="開発メンバー | おてだま">
   <div class="w-full mp-otdm">
-    <h1 class="text-4xl">Members</h1>
+    <div class="mx-8 ">
+      <h1 class="text-4xl text-center sm:text-start">開発メンバー</h1>
+    </div>
     <div class="grid justify-center gap-4 [grid-template-columns:repeat(auto-fit,18rem)] mt-12">
       {members.map( members => (
-        <div class="w-72 h-100 bg-docs-primary border-(2 otdm-secondary) rounded-lg overflow-hidden">
-          <div class="relative mb-12">
+        <div class="w-72 h-96 bg-docs-primary border-(2 otdm-secondary) rounded-lg overflow-hidden">
+          <div class="relative">
             <Image
               src={members.headerImage}
               alt={`${members.name} header`}
-              class="w-full h-40 object-cover"
+              class="w-full h-36 object-cover"
             />
-            <a href={members.github} class="absolute -bottom-12 p-2">
+            <div class="absolute -bottom-12 p-2">
               <Image 
                 src={members.avatar}
                 alt={members.name}
@@ -25,12 +27,18 @@ import { Image } from 'astro:assets';
                 height={80}
                 class="rounded-full border-(4 docs-primary )"
                 />
-            </a>
+            </div>
           </div>
-          <div class="flex flex-col gap-2 mx-4 ">
-            <a href={members.github}>{members.name}</a>
-            <p>{members.role}</p>
-            <p>{members.bio}</p>
+          <div class="mx-4">
+            <div class="flex justify-end items-center h-12 text-sm">
+              <Badge color="cyan">{members.role}</Badge>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div>
+                <a href={members.github} class="text-xl font-500 hover:underline">{members.name}</a>
+              </div>
+              <p>{members.bio}</p>
+            </div>
           </div>
         </div>
       ))}

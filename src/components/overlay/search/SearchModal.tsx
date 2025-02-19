@@ -48,7 +48,7 @@ export function SearchModal() {
     <>
       <input
         ref={inputRef}
-        class="block max-w-36 h-full p-2 m-auto text-lg btn-search-style focus:outline-unset placeholder-otdm-preh"
+        class="block max-w-36 h-full px-2 py-1 mx-2 my-auto text-lg focus:outline-unset placeholder-otdm-preh"
         type="search"
         placeholder="検索"
         value={query()}
@@ -57,9 +57,11 @@ export function SearchModal() {
           handleSearch();
         }}
       />
-      <Modal toggleOpen={toggleSearch}>
+      <Modal
+        toggleOpen={toggleSearch}
+        headerItem={<h2>検索結果 {results().length}件</h2>}
+        >
         <div class="text-docs-head">
-          <h2>検索結果 {results().length}件</h2>
           <For each={results()}>
             {(result) => <SearchItems key={result.id} result={result} />}
           </For>

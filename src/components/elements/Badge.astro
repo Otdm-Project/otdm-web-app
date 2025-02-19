@@ -1,0 +1,22 @@
+---
+interface Props {
+  color?: string;
+  style?: string;
+}
+
+interface StyleList {
+  [key: string]: string;
+}
+
+const props: Props = Astro.props;
+
+const styleList: StyleList = {
+  cyan: "bg-cyan-800 text-slate-200",
+};
+
+const color = styleList[props.color ?? "cyan"];
+---
+
+<p class={`flex justify-center w-fit h-fit px-1 rounded-md  ${color} ${props.style}`}>
+  <slot />
+</p>

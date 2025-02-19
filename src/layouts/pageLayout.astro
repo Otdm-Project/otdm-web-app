@@ -1,5 +1,5 @@
 ---
-import PageBox from '@/components/main/pages/PageBox.astro';
+import PageBox from '@/components/contents/pages/PageBox.astro';
 import Layout from './layout.astro';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
     pagefindIgnore?: boolean;
   };
 }
-const {frontmatter} = Astro.props;
+const {frontmatter}: Props = Astro.props;
 const pagefindIgnore = frontmatter.pagefindIgnore ?? false;
 ---
 <Layout title={frontmatter.title}>
