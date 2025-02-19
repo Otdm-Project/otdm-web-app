@@ -48,7 +48,7 @@ export function SearchModal() {
     <>
       <input
         ref={inputRef}
-        class="block max-w-36 h-full p-2 m-auto text-lg btn-search-style focus:outline-unset placeholder-otdm-preh"
+        class="block max-w-36 h-full px-2 py-1 mx-2 my-auto text-lg focus:outline-unset placeholder-otdm-preh"
         type="search"
         placeholder="検索"
         value={query()}
