@@ -19,7 +19,7 @@ import { Image } from 'astro:assets';
               alt={`${members.name} header`}
               class="w-full h-36 object-cover"
             />
-            <a href={members.github} class="absolute -bottom-12 p-2">
+            <div class="absolute -bottom-12 p-2">
               <Image 
                 src={members.avatar}
                 alt={members.name}
@@ -27,14 +27,14 @@ import { Image } from 'astro:assets';
                 height={80}
                 class="rounded-full border-(4 docs-primary )"
                 />
-            </a>
+            </div>
           </div>
           <div class="mx-4">
             <div class="flex justify-end items-center h-12 text-sm">
               <Badge color="cyan">{members.role}</Badge>
             </div>
             <div class="flex flex-col gap-4">
-              <a class="text-xl font-500" href={members.github}>{members.name}</a>
+              <a href={members.github} class="text-xl font-500 hover:underline">{members.name}</a>
               <p>{members.bio}</p>
             </div>
           </div>
