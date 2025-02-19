@@ -1,4 +1,4 @@
-import { createEffect, createSignal,createRoot } from 'solid-js';
+import { createEffect, createSignal, createRoot } from 'solid-js';
 
 const [_isSearchOpen, _setIsSearchOpen] = createSignal(false);
 const [_isMenuOpen, _setIsMenuOpen] = createSignal(false);

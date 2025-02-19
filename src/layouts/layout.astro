@@ -1,5 +1,4 @@
 ---
-import { ClientRouter } from 'astro:transitions';
 import Footer from '@/components/footer/Footer.astro';
 import Header from '@/components/header/Header.astro';
 
@@ -19,7 +18,6 @@ const props: Props = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{props.title}</title>
-    <ClientRouter />
   </head>
   <body class="bg-otdm-primary">
     <Header />
