@@ -8,9 +8,9 @@ import { Image } from 'astro:assets';
 <Layout title="開発メンバー | おてだま">
   <div class="w-full mp-otdm">
     <div class="flex justify-center">
-      <h1 class="text-5xl font-500">開発メンバー</h1>
+      <h1 class="text-4xl sm:text-5xl font-500">開発メンバー</h1>
     </div>
-    <div class="grid justify-center gap-4 [grid-template-columns:repeat(auto-fit,18rem)] mt-24">
+    <div class="grid justify-center gap-4 [grid-template-columns:repeat(auto-fit,18rem)] mt-16 sm:mt-24">
       {members.map( members => (
         <div class="w-72 h-96 bg-docs-primary border-(2 otdm-secondary) rounded-lg overflow-hidden">
           <div class="relative">
