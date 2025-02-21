@@ -87,6 +87,13 @@ export default defineConfig({
         'sidebar-out': 'ease-in-out'
       },
     },
+    breakpoints: {
+      xs: '320px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     colors:{
       otdm:{
         primary : "#06b6d4",
@@ -142,6 +149,7 @@ export default defineConfig({
       'box-main': 'flex flex-col gap-2 bg-docs-primary border-(2 docs-secondary) rounded-lg p-6 sm:p-12',
       'box-link': 'text-docs-link hover:underline decoration-2 outline-cyan-600',
       'box-tooltip': 'inline-block absolute inset-tooltip bg-docs-primary text-(xs docs-text nowrap) border-(2 docs-secondary) p-2 rounded-md transition pointer-events-none',
+      'dl-page-btn': 'flex justify-center gap-2 w-72 font-500 p-2 rounded-lg text-(otdm-text center) shadow-lg bg-cyan-800 hover:bg-cyan-900 sm:(text-xl px-6 py-3) max-xs:(flex-col)',
     },
     {
       'size-otdm-btn': 'size-8 sm:size-12',
